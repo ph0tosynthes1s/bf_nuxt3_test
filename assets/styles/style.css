@@ -1,0 +1,4554 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+::selection {
+  background-color: #00D36E;
+  color: #fff;
+}
+@font-face {
+  font-family: 'FemmeFatale';
+  src: url('assets/fonts/FemmeFatale-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Wadik';
+  src: url('assets/fonts/Wadik.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  margin: 0 auto;
+  max-width: 84vw;
+}
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  left: 0;
+  right: 0;
+  position: fixed;
+  margin: 0 auto;
+  width: 94vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  z-index: 1000;
+}
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  color: #D300CB;
+  align-items: center;
+  margin-left: 65px;
+}
+.header__logo-txt {
+  display: block;
+  font-family: 'FemmeFatale';
+  margin-left: 10px;
+}
+.header__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header__button-element {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #D300CB;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+.header__button-element_last {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #D300CB;
+  margin-bottom: 0px;
+  transition: 0.5s;
+}
+.header__button:hover .header__button-element {
+  background-color: #00D36E;
+  transition: 0.5s;
+}
+.header__button:hover .header__button-element_last {
+  background-color: #00D36E;
+  transition: 0.5s;
+}
+.header__button_closer {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header__button_closer .header__button-element_closer {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #D300CB;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+.header__button_closer:hover .header__button-element_closer {
+  background-color: #00D36E;
+  transition: 0.5s;
+}
+.header__button_closer:hover .header__button-element_closer {
+  background-color: #00D36E;
+  transition: 0.5s;
+}
+.main {
+  position: relative;
+  height: 100vh;
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+}
+.main canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 20vw;
+  top: 2vh;
+}
+.main__middle {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18vh;
+}
+.main__middle-base-title {
+  font-size: 120px;
+  margin-bottom: 5vh;
+  color: #D300CB;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.main__middle-base-divider {
+  height: 5px;
+  width: 700px;
+  display: block;
+  background-color: #D300CB;
+}
+.main__middle-base-subtitle {
+  font-size: 32px;
+  margin-top: 5vh;
+  color: #D300CB;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.main__bottom {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.main__bottom-subtitle {
+  font-size: 32px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+  color: transparent;
+  -webkit-text-stroke: 0.25px #D300CB;
+}
+.main__bottom-button {
+  border: none;
+  background: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.about {
+  min-height: 100vh;
+  height: auto;
+  background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  position: relative;
+}
+.about .about__blobs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 50%;
+}
+.about .container .about__title {
+  color: white;
+  padding-top: 60px;
+  font-size: 34px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.about .container .about__base {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.about .container .about__base-element {
+  border: 1px solid white;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  margin-bottom: 42px;
+  background-color: #2B002C;
+}
+.about .container .about__base-element-header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 25px 20px 50px 20px;
+}
+.about .container .about__base-element-header-title {
+  color: white;
+  font-size: 38px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.about .container .about__base-element-header-button {
+  background-color: transparent;
+  border: none;
+  color: #D300CB;
+  font-size: 32px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.about .container .about__base-element-header-button:hover {
+  color: #00D36E;
+  transition: 0.5s;
+}
+.about .container .about__base-element-txt {
+  text-align: justify;
+  padding: 0px 20px 20px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.projects {
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  display: flex;
+  height: 60vh;
+}
+.projects__card {
+  width: calc(100%/3);
+  background-color: #b603b0;
+  height: 100%;
+}
+.projects__card-pic {
+  width: 70%;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.projects__card-title {
+  font-family: 'Wadik';
+  color: #ffffff;
+  -webkit-text-stroke: 0.25px #000000;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.projects__card-list {
+  padding: 0px;
+  margin: 0px;
+  padding-left: 20px;
+  padding-top: 20px;
+  list-style-type: none;
+}
+.projects__card-list-item {
+  font-size: 21px;
+  padding-top: 5px;
+  font-family: 'Wadik';
+  color: white;
+  -webkit-text-stroke: 0.25px #000000;
+}
+.projects__card_middle {
+  width: calc(100%/3);
+  background-color: #c952c5;
+}
+.projects__card_middle .projects__card-pic-middle {
+  width: 100%;
+  padding-left: 0px;
+  padding-top: 40px;
+}
+.projects__card_right {
+  width: calc(100%/3);
+  background-color: #680165;
+}
+.projects__card_right .projects__card-pic-right {
+  width: 95%;
+  padding-left: 0px;
+  padding-right: 60px;
+  padding-top: 30px;
+}
+.services {
+  height: auto;
+  background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  position: relative;
+}
+.services .container .services__base-title {
+  padding: 60px 0px 30px 0px;
+  color: white;
+  font-size: 34px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.services .container .services__base-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5vh;
+}
+.services .container .services__base-row-element {
+  border: 1px solid white;
+  width: 41vw;
+}
+.services .container .services__base-row-element-title {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 42px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.services .container .services__base-row-element-list {
+  color: white;
+  list-style-image: url(assets/img/list.svg);
+  padding: 20px 30px 20px 40px;
+  margin: 0px;
+}
+.services .container .services__base-row-element-list-item {
+  padding: 10px 0px 10px 0px;
+  font-size: 24px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.socials {
+  height: 40vh;
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+}
+.socials .socials__title {
+  font-size: 34px;
+  color: #D300CB;
+  padding: 60px 0px 20px 0px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.socials .socials__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px 40px 0px;
+}
+.socials .socials__row-link {
+  position: relative;
+  display: flex;
+  color: #D300CB;
+  font-size: 60px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+  transition: 0.5s;
+}
+.socials .socials__row-link-pic {
+  position: absolute;
+  right: -30px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
+}
+.socials .socials__row-link:hover {
+  color: #00D36E;
+  transition: 0.5s;
+}
+.connect {
+  background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  position: relative;
+}
+.connect .connect__success {
+  color: #00D36E;
+  font-family: 'Wadik';
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  font-size: 26px;
+  width: 60%;
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.connect .connect__error {
+  color: #f76f6f;
+  font-family: 'Wadik';
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  font-size: 26px;
+  width: 60%;
+  margin: 0 auto;
+  display: none;
+  opacity: 0;
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.connect .connect__title {
+  padding-top: 60px;
+  color: white;
+  text-align: center;
+  font-size: 54px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.connect .connect__form {
+  height: 100%;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.connect .connect__form .connect__sended {
+  color: #00D36E;
+  font-size: 14px;
+  font-family: 'Wadik';
+  margin-bottom: 10px;
+}
+.connect .connect__form .connect__error {
+  color: #d30062;
+  font-size: 14px;
+  font-family: 'Wadik';
+  margin-bottom: 10px;
+}
+.connect .connect__form-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.connect .connect__form-bottom #connect__file {
+  display: none;
+  cursor: pointer;
+}
+.connect .connect__form-bottom-button {
+  display: block;
+  background-color: #D300CB;
+  border: 1px solid #D300CB;
+  padding: 20px 50px 20px 50px;
+  color: white;
+  width: auto;
+  font-family: 'Wadik';
+  font-size: 24px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.connect .connect__form-bottom-button:hover {
+  background-color: transparent;
+  transition: 0.5s;
+}
+.connect .connect__form-input {
+  width: 100%;
+  display: block;
+  color: white;
+  font-family: 'Wadik';
+  font-size: 28px;
+  line-height: 130%;
+  background: none;
+  outline: 0 transparent !important;
+  padding: 40px 0px 40px 0px;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.connect .connect__form .connect__form-input_check {
+  display: none;
+}
+.connect .connect__form-disclaimer {
+  font-family: 'Wadik';
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.524);
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.connect .connect__form-disclaimer-link {
+  font-family: 'Wadik';
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.524);
+  letter-spacing: 0.01em;
+  line-height: 129%;
+  transition: 0.5s;
+}
+.connect .connect__form-disclaimer-link:hover {
+  color: #D300CB;
+  transition: 0.5s;
+}
+.contacts {
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  position: relative;
+  height: 100vh;
+}
+.contacts canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.contacts__title {
+  font-size: 34px;
+  color: #D300CB;
+  padding: 60px 0px 20px 0px;
+  font-family: 'FemmeFatale';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+}
+.contacts__subtitle {
+  font-size: 54px;
+  color: #D300CB;
+  padding: 20px 0px 20px 0px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+  margin-top: 20vh;
+}
+.contacts__link {
+  font-size: 54px;
+  color: #D300CB;
+  padding: 20px 0px 20px 0px;
+  font-family: 'Wadik';
+  letter-spacing: 0.01em;
+  line-height: 129%;
+  transition: 0.5s;
+}
+.contacts__link:hover {
+  color: #00D36E;
+  transition: 0.5s;
+}
+.contacts .footer {
+  width: 84vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.contacts .footer__contacts {
+  width: 220px;
+}
+.contacts .footer__contacts-link {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Wadik';
+  color: #D300CB;
+  transition: 0.5s;
+  font-size: 16px;
+}
+.contacts .footer__contacts-link:hover {
+  color: #00D36E;
+  transition: 0.5s;
+}
+.contacts .footer__contacts-link-icon-pic {
+  max-width: 30px;
+  height: auto;
+  filter: invert(100%);
+}
+.contacts .footer__contacts_soc {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts .footer__address-txt {
+  font-family: 'Wadik';
+  color: #D300CB;
+}
+.menu {
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+.menu canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none !important;
+}
+.menu .container {
+  position: relative;
+}
+.menu .container .menu__logo {
+  position: absolute;
+  top: 30vh;
+  width: 40%;
+}
+.menu .container .menu__list {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+.menu .container .menu__list .menu__list-item {
+  margin-bottom: 20px;
+}
+.menu .container .menu__list .menu__list-item .menu__list-item-link {
+  color: white;
+  font-family: 'FemmeFatale';
+  font-size: 52px;
+  transition: 0.5s;
+}
+.menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+  color: #00D36E;
+  transition: 0.5s;
+}
+.menu .container .menu__footer {
+  width: 84vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90vh;
+}
+.menu .container .menu__footer-contacts {
+  width: 220px;
+}
+.menu .container .menu__footer-contacts-link {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Wadik';
+  color: #D300CB;
+  transition: 0.5s;
+  font-size: 16px;
+}
+.menu .container .menu__footer-contacts-link:hover {
+  color: #00D36E;
+  transition: 0.5s;
+}
+.menu .container .menu__footer-contacts-link-icon-pic {
+  max-width: 30px;
+  height: auto;
+}
+.menu .container .menu__footer .menu__footer-contacts_soc {
+  display: flex;
+  justify-content: space-between;
+}
+.menu .container .menu__footer-address-txt {
+  font-family: 'Wadik';
+  color: #D300CB;
+}
+@media (min-width: 1024px) and (max-width: 1399.99px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #00D36E;
+    color: #fff;
+  }
+  @font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 82vw;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    color: #D300CB;
+    align-items: center;
+    margin-left: 65px;
+  }
+  .header__logo-txt {
+    display: block;
+    font-family: 'FemmeFatale';
+    margin-left: 10px;
+  }
+  .header__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button-element {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button-element_last {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 0px;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element_last {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button_closer .header__button-element_closer {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .main {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .main canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 20vw;
+    top: -10vh;
+  }
+  .main__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18vh;
+  }
+  .main__middle-base-title {
+    font-size: 80px;
+    margin-bottom: 5vh;
+    color: #D300CB;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__middle-base-divider {
+    height: 5px;
+    width: 500px;
+    display: block;
+    background-color: #D300CB;
+  }
+  .main__middle-base-subtitle {
+    font-size: 24px;
+    margin-top: 5vh;
+    color: #D300CB;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__bottom {
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+  }
+  .main__bottom-subtitle {
+    font-size: 32px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    color: transparent;
+    -webkit-text-stroke: 0.25px #D300CB;
+  }
+  .main__bottom-button {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .about {
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .about .about__blobs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%;
+    top: 15%;
+  }
+  .about .container .about__title {
+    color: white;
+    padding-top: 60px;
+    font-size: 26px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about .container .about__base-element {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 42px;
+    background-color: #2B002C;
+  }
+  .about .container .about__base-element-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 20px 50px 20px;
+  }
+  .about .container .about__base-element-header-title {
+    color: white;
+    font-size: 28px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base-element-header-button {
+    background-color: transparent;
+    border: none;
+    color: #D300CB;
+    font-size: 32px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    cursor: pointer;
+  }
+  .about .container .about__base-element-txt {
+    text-align: justify;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .projects {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: 60vh;
+  }
+  .projects__card {
+    width: calc(100%/3);
+    background-color: #b603b0;
+    height: 100%;
+  }
+  .projects__card-pic {
+    width: 70%;
+    padding-top: 80px;
+    padding-left: 20px;
+  }
+  .projects__card-title {
+    font-family: 'Wadik';
+    color: #ffffff;
+    -webkit-text-stroke: 0.25px #000000;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  .projects__card-list {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+  }
+  .projects__card-list-item {
+    font-size: 21px;
+    padding-top: 5px;
+    font-family: 'Wadik';
+    color: white;
+    -webkit-text-stroke: 0.25px #000000;
+  }
+  .projects__card_middle {
+    width: calc(100%/3);
+    background-color: #c952c5;
+  }
+  .projects__card_middle .projects__card-pic-middle {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 100px;
+  }
+  .projects__card_right {
+    width: calc(100%/3);
+    background-color: #680165;
+  }
+  .projects__card_right .projects__card-pic-right {
+    width: 90%;
+    padding-left: 0px;
+    padding-right: 60px;
+    padding-top: 90px;
+  }
+  .services {
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .services .container .services__base-title {
+    padding: 60px 0px 30px 0px;
+    color: white;
+    font-size: 26px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5vh;
+  }
+  .services .container .services__base-row-element {
+    border: 1px solid white;
+    width: 40vw;
+    background-color: #2B002C;
+  }
+  .services .container .services__base-row-element-title {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 28px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row-element-list {
+    color: white;
+    list-style-image: url(assets/img/list.svg);
+    padding: 20px 30px 20px 40px;
+    margin: 0px;
+  }
+  .services .container .services__base-row-element-list-item {
+    padding: 10px 0px 10px 0px;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials {
+    height: 40vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .socials .socials__title {
+    font-size: 26px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials .socials__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 40px 0px;
+  }
+  .socials .socials__row-link {
+    position: relative;
+    display: flex;
+    color: #D300CB;
+    font-size: 40px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .socials .socials__row-link-pic {
+    position: absolute;
+    right: -25px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+  .socials .socials__row-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .connect {
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .connect .connect__title {
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form {
+    height: 100%;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .connect .connect__form-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .connect .connect__form-bottom #connect__file {
+    display: none;
+    cursor: pointer;
+  }
+  .connect .connect__form-bottom-button {
+    display: block;
+    background-color: #D300CB;
+    border: 1px solid #D300CB;
+    padding: 20px 50px 20px 50px;
+    color: white;
+    width: auto;
+    font-family: 'Wadik';
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .connect .connect__form-bottom-button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .connect .connect__form-input {
+    width: 100%;
+    display: block;
+    color: white;
+    font-family: 'Wadik';
+    font-size: 24px;
+    line-height: 130%;
+    background: none;
+    outline: 0 transparent !important;
+    padding: 40px 0px 40px 0px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .connect .connect__form-disclaimer {
+    font-family: 'Wadik';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form-disclaimer-link {
+    font-family: 'Wadik';
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .connect .connect__form-disclaimer-link:hover {
+    color: #D300CB;
+    transition: 0.5s;
+  }
+  .contacts {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 100vh;
+  }
+  .contacts canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .contacts__title {
+    font-size: 26px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .contacts__subtitle {
+    font-size: 32px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    margin-top: 20vh;
+  }
+  .contacts__link {
+    font-size: 32px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .contacts__link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .contacts .footer__contacts {
+    width: 220px;
+  }
+  .contacts .footer__contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 16px;
+  }
+  .contacts .footer__contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer__contacts-link-icon-pic {
+    max-width: 30px;
+    height: auto;
+    filter: invert(100%);
+  }
+  .contacts .footer__contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .footer__address-txt {
+    font-family: 'Wadik';
+    color: #D300CB;
+  }
+  .menu {
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .menu canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .menu .container {
+    position: relative;
+  }
+  .menu .container .menu__list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+  .menu .container .menu__list .menu__list-item {
+    margin-bottom: 20px;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link {
+    color: white;
+    font-family: 'FemmeFatale';
+    font-size: 42px;
+    transition: 0.5s;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90vh;
+  }
+  .menu .container .menu__footer-contacts {
+    width: 220px;
+  }
+  .menu .container .menu__footer-contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 16px;
+  }
+  .menu .container .menu__footer-contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer-contacts-link-icon-pic {
+    max-width: 30px;
+    height: auto;
+  }
+  .menu .container .menu__footer .menu__footer-contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .container .menu__footer-address-txt {
+    font-family: 'Wadik';
+    color: #D300CB;
+  }
+}
+@media (min-width: 765px) and (max-width: 1023.99px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #00D36E;
+    color: #fff;
+  }
+  @font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 80vw;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    color: #D300CB;
+    align-items: center;
+    margin-left: 50px;
+  }
+  .header__logo-txt {
+    display: block;
+    font-family: 'FemmeFatale';
+    margin-left: 10px;
+  }
+  .header__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button-element {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button-element_last {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 0px;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element_last {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button_closer .header__button-element_closer {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .main {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .main canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0vh;
+    left: 15vw;
+  }
+  .main__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18vh;
+  }
+  .main__middle-base-title {
+    font-size: 64px;
+    margin-bottom: 5vh;
+    color: #D300CB;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__middle-base-divider {
+    height: 5px;
+    width: 400px;
+    display: block;
+    background-color: #D300CB;
+  }
+  .main__middle-base-subtitle {
+    width: 400px;
+    font-size: 20px;
+    margin-top: 5vh;
+    color: #D300CB;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__bottom {
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+  }
+  .main__bottom-subtitle {
+    font-size: 32px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    color: transparent;
+    -webkit-text-stroke: 0.25px #D300CB;
+  }
+  .main__bottom-button {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .about {
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .about .about__blobs {
+    top: 10vh;
+    width: 70%;
+  }
+  .about .container .about__title {
+    color: white;
+    padding-top: 60px;
+    font-size: 26px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about .container .about__base-element {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 42px;
+    background-color: #2B002C;
+  }
+  .about .container .about__base-element-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 20px 50px 20px;
+  }
+  .about .container .about__base-element-header-title {
+    color: white;
+    font-size: 28px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base-element-header-button {
+    background-color: transparent;
+    border: none;
+    color: #D300CB;
+    font-size: 32px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    cursor: pointer;
+  }
+  .about .container .about__base-element-txt {
+    text-align: justify;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .projects {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: 60vh;
+  }
+  .projects__card {
+    width: calc(100%/3);
+    background-color: #b603b0;
+    height: 100%;
+  }
+  .projects__card-pic {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .projects__card-title {
+    font-family: 'Wadik';
+    color: #ffffff;
+    -webkit-text-stroke: 0.25px #000000;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  .projects__card-list {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+  }
+  .projects__card-list-item {
+    font-size: 21px;
+    padding-top: 5px;
+    font-family: 'Wadik';
+    color: white;
+    -webkit-text-stroke: 0.25px #000000;
+  }
+  .projects__card_middle {
+    width: calc(100%/3);
+    background-color: #c952c5;
+  }
+  .projects__card_middle .projects__card-pic-middle {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 140px;
+  }
+  .projects__card_right {
+    width: calc(100%/3);
+    background-color: #680165;
+  }
+  .projects__card_right .projects__card-pic-right {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 120px;
+    padding-top: 120px;
+  }
+  .services {
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .services canvas {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+  }
+  .services .container .services__base-title {
+    padding: 60px 0px 30px 0px;
+    color: white;
+    font-size: 26px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5vh;
+  }
+  .services .container .services__base-row-element {
+    border: 1px solid white;
+    width: 38vw;
+    background-color: #2B002C;
+  }
+  .services .container .services__base-row-element-title {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row-element-list {
+    color: white;
+    list-style-image: url(assets/img/list.svg);
+    padding: 20px 30px 20px 40px;
+    margin: 0px;
+  }
+  .services .container .services__base-row-element-list-item {
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials {
+    height: 40vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .socials .socials__title {
+    font-size: 26px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials .socials__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 40px 0px;
+  }
+  .socials .socials__row-link {
+    position: relative;
+    display: flex;
+    color: #D300CB;
+    font-size: 28px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .socials .socials__row-link-pic {
+    position: absolute;
+    right: -25px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+  .socials .socials__row-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .connect {
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .connect .connect__title {
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form {
+    height: 100%;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .connect .connect__form-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .connect .connect__form-bottom #connect__file {
+    display: none;
+    cursor: pointer;
+  }
+  .connect .connect__form-bottom-button {
+    display: block;
+    background-color: #D300CB;
+    border: 1px solid #D300CB;
+    padding: 20px 50px 20px 50px;
+    color: white;
+    width: auto;
+    font-family: 'Wadik';
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .connect .connect__form-bottom-button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .connect .connect__form-input {
+    width: 100%;
+    display: block;
+    color: white;
+    font-family: 'Wadik';
+    font-size: 18px;
+    line-height: 130%;
+    background: none;
+    outline: 0 transparent !important;
+    padding: 40px 0px 20px 0px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .connect .connect__form-disclaimer {
+    font-family: 'Wadik';
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form-disclaimer-link {
+    font-family: 'Wadik';
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .connect .connect__form-disclaimer-link:hover {
+    color: #D300CB;
+    transition: 0.5s;
+  }
+  .contacts {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 100vh;
+  }
+  .contacts canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .contacts__title {
+    font-size: 26px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .contacts__subtitle {
+    font-size: 24px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    margin-top: 20vh;
+  }
+  .contacts__link {
+    font-size: 24px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .contacts__link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .contacts .footer__contacts {
+    width: 220px;
+  }
+  .contacts .footer__contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 16px;
+  }
+  .contacts .footer__contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer__contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+    filter: invert(100%);
+  }
+  .contacts .footer__contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .footer__address-txt {
+    font-size: 16px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 20px;
+  }
+  .menu {
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .menu .container {
+    position: relative;
+  }
+  .menu .container .menu__logo {
+    position: absolute;
+    top: 35vh;
+    width: 40%;
+  }
+  .menu .container .menu__list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 200px;
+  }
+  .menu .container .menu__list .menu__list-item {
+    margin-bottom: 20px;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link {
+    color: white;
+    font-family: 'FemmeFatale';
+    font-size: 32px;
+    transition: 0.5s;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 75vh;
+  }
+  .menu .container .menu__footer-contacts {
+    width: 200px;
+  }
+  .menu .container .menu__footer-contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 16px;
+  }
+  .menu .container .menu__footer-contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer-contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+  }
+  .menu .container .menu__footer .menu__footer-contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .container .menu__footer-address-txt {
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 425px) and (max-width: 764.99px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #00D36E;
+    color: #fff;
+  }
+  @font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 85vw;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    color: #D300CB;
+    align-items: center;
+    margin-left: 0px !important;
+  }
+  .header__logo-txt {
+    display: block;
+    font-family: 'FemmeFatale';
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .header__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button-element {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button-element_last {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 0px;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element_last {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button_closer .header__button-element_closer {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .main {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .main canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0vh;
+    left: 10vw;
+    z-index: -1;
+  }
+  .main__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18vh;
+  }
+  .main__middle-base-title {
+    font-size: 42px;
+    margin-bottom: 5vh;
+    color: #D300CB;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__middle-base-divider {
+    height: 5px;
+    width: 200px;
+    display: block;
+    background-color: #D300CB;
+  }
+  .main__middle-base-subtitle {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 5vh;
+    color: #D300CB;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__bottom {
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+  }
+  .main__bottom-subtitle {
+    font-size: 32px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    color: transparent;
+    -webkit-text-stroke: 0.25px #D300CB;
+  }
+  .main__bottom-button {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .about {
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .about .about__blobs {
+    width: 100%;
+    top: 15vh;
+  }
+  .about .container .about__title {
+    color: white;
+    padding-top: 60px;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about .container .about__base-element {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 42px;
+    background-color: #2B002C;
+  }
+  .about .container .about__base-element-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 20px 50px 20px;
+  }
+  .about .container .about__base-element-header-title {
+    color: white;
+    font-size: 20px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base-element-header-button {
+    background-color: transparent;
+    border: none;
+    color: #D300CB;
+    font-size: 32px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    cursor: pointer;
+  }
+  .about .container .about__base-element-txt {
+    text-align: left;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.2em;
+    line-height: 135%;
+  }
+  .projects {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .projects__card {
+    width: 100%;
+    background-color: #b603b0;
+    height: 540px;
+  }
+  .projects__card-pic {
+    width: 80%;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .projects__card-title {
+    font-family: 'Wadik';
+    color: #ffffff;
+    -webkit-text-stroke: 0.25px #000000;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 26px;
+  }
+  .projects__card-list {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+  }
+  .projects__card-list-item {
+    font-size: 28px;
+    padding-top: 5px;
+    font-family: 'Wadik';
+    color: white;
+    -webkit-text-stroke: 0.25px #000000;
+  }
+  .projects__card_middle {
+    width: 100%;
+    background-color: #c952c5;
+  }
+  .projects__card_middle .projects__card-pic-middle {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 90px;
+  }
+  .projects__card_right {
+    width: 100%;
+    background-color: #680165;
+  }
+  .projects__card_right .projects__card-pic-right {
+    width: 80%;
+    padding-left: 0px;
+    padding-right: 100px;
+    padding-top: 80px;
+  }
+  .services {
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .services .container .services__base-title {
+    padding: 60px 0px 30px 0px;
+    color: white;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0vh;
+    flex-direction: column;
+  }
+  .services .container .services__base-row-element {
+    border: 1px solid white;
+    width: 100%;
+    background-color: #2B002C;
+    margin-bottom: 20px;
+  }
+  .services .container .services__base-row-element-title {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row-element-list {
+    color: white;
+    list-style-image: url(assets/img/list.svg);
+    padding: 20px 30px 20px 40px;
+    margin: 0px;
+  }
+  .services .container .services__base-row-element-list-item {
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials {
+    height: 45vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .socials .socials__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials .socials__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 40px 0px;
+    flex-direction: column;
+  }
+  .socials .socials__row-link {
+    position: relative;
+    display: flex;
+    color: #D300CB;
+    font-size: 26px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+    padding-bottom: 20px;
+  }
+  .socials .socials__row-link-pic {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+  .socials .socials__row-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .connect {
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .connect .connect__success {
+    color: #00D36E;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__error {
+    color: #f76f6f;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__title {
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form {
+    height: 100%;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .connect .connect__form-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .connect .connect__form-bottom #connect__file {
+    display: none;
+    cursor: pointer;
+  }
+  .connect .connect__form-bottom-button {
+    display: block;
+    background-color: #D300CB;
+    border: 1px solid #D300CB;
+    padding: 20px 50px 20px 50px;
+    color: white;
+    width: auto;
+    font-family: 'Wadik';
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .connect .connect__form-bottom-button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .connect .connect__form-input {
+    width: 100%;
+    display: block;
+    color: white;
+    font-family: 'Wadik';
+    font-size: 18px;
+    line-height: 130%;
+    background: none;
+    outline: 0 transparent !important;
+    padding: 40px 0px 20px 0px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .connect .connect__form-disclaimer {
+    font-family: 'Wadik';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form-disclaimer-link {
+    font-family: 'Wadik';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .connect .connect__form-disclaimer-link:hover {
+    color: #D300CB;
+    transition: 0.5s;
+  }
+  .contacts {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 100vh;
+  }
+  .contacts canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .contacts__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .contacts__subtitle {
+    font-size: 18px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    margin-top: 20vh;
+  }
+  .contacts__link {
+    width: 350px;
+    font-size: 18px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .contacts__link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer {
+    width: 82vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+  }
+  .contacts .footer__contacts {
+    width: 220px;
+  }
+  .contacts .footer__contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 16px;
+  }
+  .contacts .footer__contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer__contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+    filter: invert(100%);
+  }
+  .contacts .footer__contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .footer__address-txt {
+    font-size: 16px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+  .menu {
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .menu canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .menu .container {
+    position: relative;
+  }
+  .menu .container .menu__logo {
+    position: absolute;
+    top: 40vh;
+    width: 40%;
+  }
+  .menu .container .menu__list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 220px;
+  }
+  .menu .container .menu__list .menu__list-item {
+    margin-bottom: 20px;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link {
+    color: white;
+    font-family: 'FemmeFatale';
+    font-size: 21px;
+    transition: 0.5s;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75vh;
+  }
+  .menu .container .menu__footer-contacts {
+    width: 220px;
+  }
+  .menu .container .menu__footer-contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 16px;
+  }
+  .menu .container .menu__footer-contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer-contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+  }
+  .menu .container .menu__footer .menu__footer-contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .container .menu__footer-address-txt {
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 375px) and (max-width: 424.99px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #00D36E;
+    color: #fff;
+  }
+  @font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 85vw;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    color: #D300CB;
+    align-items: center;
+    margin-left: 0px !important;
+  }
+  .header__logo-txt {
+    display: block;
+    font-family: 'FemmeFatale';
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .header__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button-element {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button-element_last {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 0px;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element_last {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button_closer .header__button-element_closer {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .main {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .main canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 10vh;
+    left: 33vw;
+    z-index: -1;
+  }
+  .main__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18vh;
+  }
+  .main__middle-base-title {
+    font-size: 42px;
+    margin-bottom: 5vh;
+    color: #D300CB;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__middle-base-divider {
+    height: 5px;
+    width: 200px;
+    display: block;
+    background-color: #D300CB;
+  }
+  .main__middle-base-subtitle {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 5vh;
+    color: #D300CB;
+    font-family: 'Wadik';
+    letter-spacing: 0.1em;
+    line-height: 135%;
+  }
+  .main__bottom {
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+  }
+  .main__bottom-subtitle {
+    font-size: 32px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    width: 200px;
+    line-height: 129%;
+    color: transparent;
+    -webkit-text-stroke: 0.25px #D300CB;
+    margin: 0 auto;
+  }
+  .main__bottom-button {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .about {
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .about .about__blobs {
+    width: 100%;
+    top: 25vh;
+  }
+  .about .container .about__title {
+    color: white;
+    padding-top: 60px;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about .container .about__base-element {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 42px;
+    background-color: #2B002C;
+  }
+  .about .container .about__base-element-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 20px 50px 20px;
+  }
+  .about .container .about__base-element-header-title {
+    color: white;
+    font-size: 20px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base-element-header-button {
+    background-color: transparent;
+    border: none;
+    color: #D300CB;
+    font-size: 32px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    cursor: pointer;
+  }
+  .about .container .about__base-element-txt {
+    text-align: left;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .projects {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .projects__card {
+    width: 100%;
+    background-color: #b603b0;
+    height: 520px;
+  }
+  .projects__card-pic {
+    width: 80%;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .projects__card-title {
+    font-family: 'Wadik';
+    color: #ffffff;
+    -webkit-text-stroke: 0.25px #000000;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 26px;
+  }
+  .projects__card-list {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+  }
+  .projects__card-list-item {
+    font-size: 28px;
+    padding-top: 5px;
+    font-family: 'Wadik';
+    color: white;
+    -webkit-text-stroke: 0.25px #000000;
+  }
+  .projects__card_middle {
+    width: 100%;
+    background-color: #c952c5;
+  }
+  .projects__card_middle .projects__card-pic-middle {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 90px;
+  }
+  .projects__card_right {
+    width: 100%;
+    background-color: #680165;
+  }
+  .projects__card_right .projects__card-pic-right {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 100px;
+    padding-top: 80px;
+  }
+  .services {
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .services canvas {
+    display: none !important;
+    position: absolute;
+    height: 50%;
+    width: 50%;
+  }
+  .services .container .services__base-title {
+    padding: 60px 0px 30px 0px;
+    color: white;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0vh;
+    flex-direction: column;
+  }
+  .services .container .services__base-row-element {
+    border: 1px solid white;
+    width: 100%;
+    background-color: #2B002C;
+    margin-bottom: 20px;
+  }
+  .services .container .services__base-row-element-title {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row-element-list {
+    color: white;
+    list-style-image: url(assets/img/list.svg);
+    padding: 20px 30px 20px 40px;
+    margin: 0px;
+  }
+  .services .container .services__base-row-element-list-item {
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials {
+    height: 50vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .socials .socials__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials .socials__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 40px 0px;
+    flex-direction: column;
+  }
+  .socials .socials__row-link {
+    position: relative;
+    display: flex;
+    color: #D300CB;
+    font-size: 26px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+    padding-bottom: 20px;
+  }
+  .socials .socials__row-link-pic {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+  .socials .socials__row-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .connect {
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .connect .connect__success {
+    color: #00D36E;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__error {
+    color: #f76f6f;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__title {
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form {
+    height: 100%;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .connect .connect__form-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .connect .connect__form-bottom #connect__file {
+    display: none;
+    cursor: pointer;
+  }
+  .connect .connect__form-bottom-button {
+    display: block;
+    background-color: #D300CB;
+    border: 1px solid #D300CB;
+    padding: 20px 30px 20px 30px;
+    color: white;
+    width: auto;
+    font-family: 'Wadik';
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .connect .connect__form-bottom-button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .connect .connect__form-input {
+    width: 100%;
+    display: block;
+    color: white;
+    font-family: 'Wadik';
+    font-size: 18px;
+    line-height: 130%;
+    background: none;
+    outline: 0 transparent !important;
+    padding: 40px 0px 20px 0px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .connect .connect__form-disclaimer {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form-disclaimer-link {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .connect .connect__form-disclaimer-link:hover {
+    color: #D300CB;
+    transition: 0.5s;
+  }
+  .contacts {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 100vh;
+  }
+  .contacts canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .contacts__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .contacts__subtitle {
+    font-size: 16px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    margin-top: 20vh;
+  }
+  .contacts__link {
+    width: 350px;
+    font-size: 14px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .contacts__link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer {
+    width: 82vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+  }
+  .contacts .footer__contacts {
+    width: 220px;
+  }
+  .contacts .footer__contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 14px;
+  }
+  .contacts .footer__contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer__contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+    filter: invert(100%);
+  }
+  .contacts .footer__contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .footer__address-txt {
+    font-size: 14px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+  .menu {
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .menu .container {
+    position: relative;
+  }
+  .menu .container .menu__logo {
+    position: absolute;
+    top: 30vh;
+    width: 40%;
+    display: none;
+  }
+  .menu .container .menu__list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    margin: 0 auto;
+    left: 0;
+    top: 220px;
+    text-align: center;
+  }
+  .menu .container .menu__list .menu__list-item {
+    margin-bottom: 20px;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link {
+    color: white;
+    font-family: 'FemmeFatale';
+    font-size: 21px;
+    transition: 0.5s;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75vh;
+  }
+  .menu .container .menu__footer-contacts {
+    width: 220px;
+  }
+  .menu .container .menu__footer-contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 14px;
+  }
+  .menu .container .menu__footer-contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer-contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+  }
+  .menu .container .menu__footer .menu__footer-contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .container .menu__footer-address-txt {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 350px) and (max-width: 374.99px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #00D36E;
+    color: #fff;
+  }
+  @font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 85vw;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    color: #D300CB;
+    align-items: center;
+    margin-left: 0px !important;
+  }
+  .header__logo-txt {
+    display: block;
+    font-family: 'FemmeFatale';
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .header__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button-element {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button-element_last {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 0px;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element_last {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button_closer .header__button-element_closer {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .main {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .main canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 10vh;
+    left: 33vw;
+    z-index: -1;
+  }
+  .main__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18vh;
+  }
+  .main__middle-base-title {
+    font-size: 42px;
+    margin-bottom: 5vh;
+    color: #D300CB;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__middle-base-divider {
+    height: 5px;
+    width: 200px;
+    display: block;
+    background-color: #D300CB;
+  }
+  .main__middle-base-subtitle {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 5vh;
+    color: #D300CB;
+    font-family: 'Wadik';
+    letter-spacing: 0.1em;
+    line-height: 135%;
+  }
+  .main__bottom {
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+  }
+  .main__bottom-subtitle {
+    font-size: 32px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    width: 200px;
+    line-height: 129%;
+    color: transparent;
+    -webkit-text-stroke: 0.25px #D300CB;
+    margin: 0 auto;
+  }
+  .main__bottom-button {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .about {
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .about .about__blobs {
+    width: 100%;
+    top: 25vh;
+  }
+  .about .container .about__title {
+    color: white;
+    padding-top: 60px;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about .container .about__base-element {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 42px;
+    background-color: #2B002C;
+  }
+  .about .container .about__base-element-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 20px 50px 20px;
+  }
+  .about .container .about__base-element-header-title {
+    color: white;
+    font-size: 20px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base-element-header-button {
+    background-color: transparent;
+    border: none;
+    color: #D300CB;
+    font-size: 32px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    cursor: pointer;
+  }
+  .about .container .about__base-element-txt {
+    text-align: left;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .projects {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .projects__card {
+    width: 100%;
+    background-color: #b603b0;
+    height: 520px;
+  }
+  .projects__card-pic {
+    width: 80%;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .projects__card-title {
+    font-family: 'Wadik';
+    color: #ffffff;
+    -webkit-text-stroke: 0.25px #000000;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 26px;
+  }
+  .projects__card-list {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+  }
+  .projects__card-list-item {
+    font-size: 28px;
+    padding-top: 5px;
+    font-family: 'Wadik';
+    color: white;
+    -webkit-text-stroke: 0.25px #000000;
+  }
+  .projects__card_middle {
+    width: 100%;
+    background-color: #c952c5;
+  }
+  .projects__card_middle .projects__card-pic-middle {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 120px;
+  }
+  .projects__card_right {
+    width: 100%;
+    background-color: #680165;
+  }
+  .projects__card_right .projects__card-pic-right {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 100px;
+    padding-top: 80px;
+  }
+  .services {
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .services canvas {
+    display: none !important;
+    position: absolute;
+    height: 50%;
+    width: 50%;
+  }
+  .services .container .services__base-title {
+    padding: 60px 0px 30px 0px;
+    color: white;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0vh;
+    flex-direction: column;
+  }
+  .services .container .services__base-row-element {
+    border: 1px solid white;
+    width: 100%;
+    background-color: #2B002C;
+    margin-bottom: 20px;
+  }
+  .services .container .services__base-row-element-title {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row-element-list {
+    color: white;
+    list-style-image: url(assets/img/list.svg);
+    padding: 20px 30px 20px 40px;
+    margin: 0px;
+  }
+  .services .container .services__base-row-element-list-item {
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials {
+    height: 50vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .socials .socials__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials .socials__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 40px 0px;
+    flex-direction: column;
+  }
+  .socials .socials__row-link {
+    position: relative;
+    display: flex;
+    color: #D300CB;
+    font-size: 26px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+    padding-bottom: 20px;
+  }
+  .socials .socials__row-link-pic {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+  .socials .socials__row-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .connect {
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .connect .connect__success {
+    color: #00D36E;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__error {
+    color: #f76f6f;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 21px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__title {
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form {
+    height: 100%;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .connect .connect__form-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .connect .connect__form-bottom #connect__file {
+    display: none;
+    cursor: pointer;
+  }
+  .connect .connect__form-bottom-button {
+    display: block;
+    background-color: #D300CB;
+    border: 1px solid #D300CB;
+    padding: 20px 30px 20px 30px;
+    color: white;
+    width: auto;
+    font-family: 'Wadik';
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .connect .connect__form-bottom-button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .connect .connect__form-input {
+    width: 100%;
+    display: block;
+    color: white;
+    font-family: 'Wadik';
+    font-size: 18px;
+    line-height: 130%;
+    background: none;
+    outline: 0 transparent !important;
+    padding: 40px 0px 20px 0px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .connect .connect__form-disclaimer {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form-disclaimer-link {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .connect .connect__form-disclaimer-link:hover {
+    color: #D300CB;
+    transition: 0.5s;
+  }
+  .contacts {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 100vh;
+  }
+  .contacts canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .contacts__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .contacts__subtitle {
+    font-size: 16px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    margin-top: 20vh;
+  }
+  .contacts__link {
+    width: 350px;
+    font-size: 14px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .contacts__link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer {
+    width: 82vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+  }
+  .contacts .footer__contacts {
+    width: 220px;
+  }
+  .contacts .footer__contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 14px;
+  }
+  .contacts .footer__contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer__contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+    filter: invert(100%);
+  }
+  .contacts .footer__contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .footer__address-txt {
+    font-size: 14px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+  .menu {
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .menu .container {
+    position: relative;
+  }
+  .menu .container .menu__logo {
+    position: absolute;
+    top: 30vh;
+    width: 40%;
+    display: none;
+  }
+  .menu .container .menu__list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 220px;
+  }
+  .menu .container .menu__list .menu__list-item {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link {
+    color: white;
+    font-family: 'FemmeFatale';
+    font-size: 21px;
+    transition: 0.5s;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75vh;
+  }
+  .menu .container .menu__footer-contacts {
+    width: 220px;
+  }
+  .menu .container .menu__footer-contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 14px;
+  }
+  .menu .container .menu__footer-contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer-contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+  }
+  .menu .container .menu__footer .menu__footer-contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .container .menu__footer-address-txt {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 325px) and (max-width: 349.99px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #00D36E;
+    color: #fff;
+  }
+  @font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 85vw;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1000;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: space-between;
+    color: #D300CB;
+    align-items: center;
+    margin-left: 0px !important;
+  }
+  .header__logo-txt {
+    display: block;
+    font-family: 'FemmeFatale';
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .header__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button-element {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button-element_last {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 0px;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button:hover .header__button-element_last {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .header__button_closer .header__button-element_closer {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #D300CB;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .header__button_closer:hover .header__button-element_closer {
+    background-color: #00D36E;
+    transition: 0.5s;
+  }
+  .main {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .main canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 10vh;
+    left: 36vw;
+    z-index: -1;
+  }
+  .main__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18vh;
+  }
+  .main__middle-base-title {
+    font-size: 42px;
+    margin-bottom: 5vh;
+    color: #D300CB;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .main__middle-base-divider {
+    height: 5px;
+    width: 200px;
+    display: block;
+    background-color: #D300CB;
+  }
+  .main__middle-base-subtitle {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 5vh;
+    color: #D300CB;
+    font-family: 'Wadik';
+    letter-spacing: 0.1em;
+    line-height: 135%;
+  }
+  .main__bottom {
+    position: absolute;
+    text-align: center;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+  }
+  .main__bottom-subtitle {
+    font-size: 32px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    width: 200px;
+    line-height: 129%;
+    color: transparent;
+    -webkit-text-stroke: 0.25px #D300CB;
+    margin: 0 auto;
+  }
+  .main__bottom-button {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .about {
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+  }
+  .about .about__blobs {
+    width: 100%;
+    top: 25vh;
+  }
+  .about .container .about__title {
+    color: white;
+    padding-top: 60px;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about .container .about__base-element {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 42px;
+    background-color: #2B002C;
+  }
+  .about .container .about__base-element-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 20px 50px 20px;
+  }
+  .about .container .about__base-element-header-title {
+    color: white;
+    font-size: 20px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .about .container .about__base-element-header-button {
+    background-color: transparent;
+    border: none;
+    color: #D300CB;
+    font-size: 32px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    cursor: pointer;
+  }
+  .about .container .about__base-element-txt {
+    text-align: left;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .projects {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .projects__card {
+    width: 100%;
+    background-color: #b603b0;
+    height: 520px;
+  }
+  .projects__card-pic {
+    width: 80%;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .projects__card-title {
+    font-family: 'Wadik';
+    color: #ffffff;
+    -webkit-text-stroke: 0.25px #000000;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 26px;
+  }
+  .projects__card-list {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style-type: none;
+  }
+  .projects__card-list-item {
+    font-size: 28px;
+    padding-top: 5px;
+    font-family: 'Wadik';
+    color: white;
+    -webkit-text-stroke: 0.25px #000000;
+  }
+  .projects__card_middle {
+    width: 100%;
+    background-color: #c952c5;
+  }
+  .projects__card_middle .projects__card-pic-middle {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 120px;
+  }
+  .projects__card_right {
+    width: 100%;
+    background-color: #680165;
+  }
+  .projects__card_right .projects__card-pic-right {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 100px;
+    padding-top: 80px;
+  }
+  .services {
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .services canvas {
+    display: none !important;
+    position: absolute;
+    height: 50%;
+    width: 50%;
+  }
+  .services .container .services__base-title {
+    padding: 60px 0px 30px 0px;
+    color: white;
+    font-size: 21px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0vh;
+    flex-direction: column;
+  }
+  .services .container .services__base-row-element {
+    border: 1px solid white;
+    width: 100%;
+    background-color: #2B002C;
+    margin-bottom: 20px;
+  }
+  .services .container .services__base-row-element-title {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 24px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .services .container .services__base-row-element-list {
+    color: white;
+    list-style-image: url(assets/img/list.svg);
+    padding: 20px 30px 20px 40px;
+    margin: 0px;
+  }
+  .services .container .services__base-row-element-list-item {
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials {
+    height: 50vh;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+  }
+  .socials .socials__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .socials .socials__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 40px 0px;
+    flex-direction: column;
+  }
+  .socials .socials__row-link {
+    position: relative;
+    display: flex;
+    color: #D300CB;
+    font-size: 26px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+    padding-bottom: 20px;
+  }
+  .socials .socials__row-link-pic {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+  }
+  .socials .socials__row-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .connect {
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+  }
+  .connect .connect__success {
+    color: #00D36E;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__error {
+    color: #f76f6f;
+    font-family: 'Wadik';
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__title {
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form {
+    height: 100%;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  .connect .connect__form-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .connect .connect__form-bottom #connect__file {
+    display: none;
+    cursor: pointer;
+  }
+  .connect .connect__form-bottom-button {
+    display: block;
+    background-color: #D300CB;
+    border: 1px solid #D300CB;
+    padding: 20px 30px 20px 30px;
+    color: white;
+    width: auto;
+    font-family: 'Wadik';
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .connect .connect__form-bottom-button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .connect .connect__form-input {
+    width: 100%;
+    display: block;
+    color: white;
+    font-family: 'Wadik';
+    font-size: 18px;
+    line-height: 130%;
+    background: none;
+    outline: 0 transparent !important;
+    padding: 40px 0px 20px 0px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .connect .connect__form-disclaimer {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .connect .connect__form-disclaimer-link {
+    font-family: 'Wadik';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.524);
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .connect .connect__form-disclaimer-link:hover {
+    color: #D300CB;
+    transition: 0.5s;
+  }
+  .contacts {
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 100vh;
+  }
+  .contacts canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .contacts__title {
+    font-size: 21px;
+    color: #D300CB;
+    padding: 60px 0px 20px 0px;
+    font-family: 'FemmeFatale';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+  }
+  .contacts__subtitle {
+    font-size: 16px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    margin-top: 20vh;
+  }
+  .contacts__link {
+    width: 350px;
+    font-size: 12px;
+    color: #D300CB;
+    padding: 20px 0px 20px 0px;
+    font-family: 'Wadik';
+    letter-spacing: 0.01em;
+    line-height: 129%;
+    transition: 0.5s;
+  }
+  .contacts__link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer {
+    width: 82vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+  }
+  .contacts .footer__contacts {
+    width: 220px;
+  }
+  .contacts .footer__contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 12px;
+  }
+  .contacts .footer__contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .contacts .footer__contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+    filter: invert(100%);
+  }
+  .contacts .footer__contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .footer__address-txt {
+    font-size: 12px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+  .menu {
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  .menu .container {
+    position: relative;
+  }
+  .menu .container .menu__logo {
+    position: absolute;
+    top: 30vh;
+    width: 40%;
+    display: none;
+  }
+  .menu .container .menu__list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 220px;
+  }
+  .menu .container .menu__list .menu__list-item {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link {
+    color: white;
+    font-family: 'FemmeFatale';
+    font-size: 21px;
+    transition: 0.5s;
+  }
+  .menu .container .menu__list .menu__list-item .menu__list-item-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer {
+    width: 84vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75vh;
+  }
+  .menu .container .menu__footer-contacts {
+    width: 220px;
+  }
+  .menu .container .menu__footer-contacts-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Wadik';
+    color: #D300CB;
+    transition: 0.5s;
+    font-size: 12px;
+  }
+  .menu .container .menu__footer-contacts-link:hover {
+    color: #00D36E;
+    transition: 0.5s;
+  }
+  .menu .container .menu__footer-contacts-link-icon-pic {
+    max-width: 25px;
+    height: auto;
+  }
+  .menu .container .menu__footer .menu__footer-contacts_soc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .container .menu__footer-address-txt {
+    font-family: 'Wadik';
+    font-size: 12px;
+    color: #D300CB;
+    margin-bottom: 40px;
+  }
+}

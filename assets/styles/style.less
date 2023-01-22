@@ -1,0 +1,4812 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: #00D36E;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'FemmeFatale';
+    src: url('assets/fonts/FemmeFatale-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wadik';
+    src: url('assets/fonts/Wadik.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 84vw;
+}
+
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: 0 auto;
+    width: 94vw;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 80px;
+    z-index: 1000;
+    &__logo{
+        display: flex;
+        justify-content:space-between;
+        color: #D300CB;
+        align-items: center;
+        margin-left: 65px;
+        &-txt{
+            display: block;
+            font-family: 'FemmeFatale';
+            margin-left:10px;
+        }
+    }
+    &__button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        
+        &-element{
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #D300CB;
+            margin-bottom: 5px;
+            transition: 0.5s;
+        }
+        &-element_last{
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #D300CB;
+            margin-bottom: 0px;
+            transition: 0.5s;
+        }
+        &:hover{
+            .header__button-element{
+                background-color: #00D36E;
+                transition: 0.5s;
+            }
+            .header__button-element_last{
+                background-color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+    }
+    &__button_closer{
+        display: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        
+        .header__button-element_closer{
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #D300CB;
+            margin-bottom: 5px;
+            transition: 0.5s;
+        }
+        &:hover{
+            .header__button-element_closer{
+                background-color: #00D36E;
+                transition: 0.5s;
+            }
+            .header__button-element_closer{
+                background-color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+    canvas{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left:20vw;
+        top:2vh;
+    }
+    &__middle{
+        display: flex;
+        justify-content:space-between;
+        padding-top:18vh;
+        &-base{
+            &-title{
+                font-size: 120px;
+                margin-bottom: 5vh;
+                color:#D300CB;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            &-divider{
+                height: 5px;
+                width: 700px;
+                display: block;
+                background-color:#D300CB;
+            }
+            &-subtitle{
+                font-size: 32px;
+                margin-top:5vh;
+                color: #D300CB;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+        }
+    }
+    &__bottom{
+        position: absolute;
+        text-align: center;
+        bottom: 2vh;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        &-subtitle{
+            font-size: 32px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            color: transparent;
+            -webkit-text-stroke: 0.25px #D300CB;
+        }
+        &-button{
+            border: none;
+            background: none;
+            margin-top:5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.about{
+    min-height: 100vh;
+    height: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+    .about__blobs{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .container{
+        .about__title{
+            color: white;
+            padding-top: 60px;
+            font-size:34px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .about__base{
+            padding-top:10vh;
+            padding-bottom:10vh;
+            &-element{
+                border:1px solid white;
+                width: 100%;
+                min-height:100px;
+                height: auto;
+                margin-bottom: 42px;
+                background-color: #2B002C;
+                &-header{
+                    display:flex;
+                    justify-content: space-between;
+                    text-align: center;
+                    padding: 25px 20px 50px 20px;
+                    &-title{
+                        color:white;
+                        font-size: 38px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                    &-button{
+                        background-color:transparent;
+                        border: none;
+                        color:#D300CB;
+                        font-size:32px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                        cursor: pointer;
+                        transition:0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition:0.5s;
+                        }
+                    }
+                }
+                &-txt{
+                    text-align:justify;
+                    padding: 0px 20px 20px 20px;
+                    color:white;
+                    font-size: 18px;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+            }
+        }
+    }
+}
+
+
+.projects{
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+    display: flex;
+    height: 60vh;
+    &__card{
+        width:calc(100%/3);
+        background-color: #b603b0;
+        height: 100%;
+        &-pic{
+            width: 70%;
+            padding-top: 30px;
+            padding-left: 20px;
+        }
+        &-title{
+            font-family: 'Wadik';
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke: 0.25px #000000;
+            padding-top: 20px;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        &-list{
+            padding: 0px;
+            margin: 0px;
+            padding-left: 20px;
+            padding-top: 20px;
+            list-style-type: none;
+            &-item{
+                font-size:21px;
+                padding-top: 5px;
+                font-family: 'Wadik';
+                color: white;
+                -webkit-text-stroke: 0.25px #000000;
+            }
+        }
+    }
+    &__card_middle{
+        width:calc(100%/3);
+        background-color: #c952c5;
+        .projects__card-pic-middle{
+            width: 100%;
+            padding-left: 0px;
+            padding-top: 40px;
+        }
+    }
+    &__card_right{
+        width:calc(100%/3);
+        background-color: #680165;
+        .projects__card-pic-right{
+            width: 95%;
+            padding-left: 0px;
+            padding-right: 60px;
+            padding-top: 30px;
+        }
+    }
+}
+
+.services{
+    height:auto;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+    .container{
+        .services__base{
+            &-title{
+                padding:60px 0px 30px 0px;
+                color: white;
+                font-size:34px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            &-row{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 5vh;
+                &-element{
+                    border: 1px solid white;
+                    width: 41vw;
+                    &-title{
+                        color: white;
+                        text-align: center;
+                        padding-top: 20px;
+                        font-size: 42px;
+                        font-family: 'FemmeFatale';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                    &-list{
+                        color: white;
+                        list-style-image: url(assets/img/list.svg);
+                        padding: 20px 30px 20px 40px;
+                        margin: 0px;
+                        &-item{
+                            padding: 10px 0px 10px 0px;
+                            font-size: 24px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.socials{
+    height: 40vh;
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+    .socials__title{
+        font-size:34px;
+        color:#D300CB;
+        padding:60px 0px 20px 0px;
+        font-family: 'FemmeFatale';
+        letter-spacing: 0.01em;
+        line-height: 129%;
+    }
+    .socials__row{
+        display:flex;
+        justify-content:space-between;
+        padding:40px 0px 40px 0px;
+        &-link{
+            position: relative;
+            display: flex;
+            color:#D300CB;
+            font-size:60px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition:0.5s;
+            &-pic{
+                position: absolute;
+                right: -30px;
+                top: 15px;
+                width: 20px;
+                height: 20px;
+                filter: invert(100%);
+            }
+            &:hover{
+                color:#00D36E;
+                transition:0.5s;
+            }
+        }
+    }
+}
+
+.connect{
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    position: relative;
+    .connect__success{
+        color:#00D36E;
+        font-family: 'Wadik';
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        left: 0;
+        right: 0;
+        font-size: 26px;
+        width: 60%;
+        margin: 0 auto;
+        display: none;
+        opacity: 0;
+        letter-spacing: 0.01em;
+        line-height: 129%;
+    }
+    .connect__error{
+        color: rgb(247, 111, 111);
+        font-family: 'Wadik';
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        left: 0;
+        right: 0;
+        font-size: 26px;
+        width: 60%;
+        margin: 0 auto;
+        display: none;
+        opacity: 0;
+        letter-spacing: 0.01em;
+        line-height: 129%;
+    }
+    .connect__title{
+        padding-top:60px;
+        color: white;
+        text-align: center;
+        font-size:54px;
+        font-family: 'FemmeFatale';
+        letter-spacing: 0.01em;
+        line-height: 129%;
+    }
+    .connect__form{
+        height: 100%;
+        width: 70vw;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        .connect__sended{
+            color: #00D36E;
+            font-size: 14px;
+            font-family: 'Wadik';
+            margin-bottom: 10px;
+        }
+        .connect__error{
+            color: #d30062;
+            font-size: 14px;
+            font-family: 'Wadik';
+            margin-bottom: 10px;
+        }
+        &-bottom{
+            display: flex;
+            justify-content:space-between;
+            #connect__file{
+                display: none;
+                cursor: pointer;
+            }
+            &-button{
+                display: block;
+                background-color:#D300CB;
+                border: 1px solid #D300CB;
+                padding: 20px 50px 20px 50px;
+                color: white;
+                width: auto;
+                font-family: 'Wadik';
+                font-size:24px;
+                margin: 0 auto;
+                margin-bottom:20px;
+                margin-top:40px;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover{
+                    background-color: transparent;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &-input{
+            width:100%;
+            display: block;
+            color: white;
+            font-family: 'Wadik';
+            font-size: 28px;
+            line-height: 130%;
+            background: none;
+            outline: 0 transparent !important;
+            padding: 40px 0px 40px 0px;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+        .connect__form-input_check{
+            display: none;
+        }
+        &-disclaimer{
+            font-family:'Wadik';
+            font-size: 21px;
+            color: rgba(255, 255, 255, 0.524);
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            &-link{
+                font-family:'Wadik';
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition: 0.5s;
+                &:hover{
+                    color: #D300CB;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+
+.contacts{
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+    position: relative;
+    height: 100vh;
+    canvas{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    &__title{
+        font-size:34px;
+        color:#D300CB;
+        padding:60px 0px 20px 0px;
+        font-family: 'FemmeFatale';
+        letter-spacing: 0.01em;
+        line-height: 129%;
+    }
+    &__subtitle{
+        font-size:54px;
+        color:#D300CB;
+        padding:20px 0px 20px 0px;
+        font-family: 'Wadik';
+        letter-spacing: 0.01em;
+        line-height: 129%;
+        margin-top: 20vh;
+    }
+    &__link{
+        font-size:54px;
+        color:#D300CB;
+        padding:20px 0px 20px 0px;
+        font-family: 'Wadik';
+        letter-spacing: 0.01em;
+        line-height: 129%;
+        transition: 0.5s;
+        &:hover{
+            color: #00D36E;
+            transition: 0.5s;
+        }
+    }
+    .footer{
+        width: 84vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content:space-between;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        &__contacts{
+            width: 220px;
+            &-link{
+                display: block;
+                margin-bottom:15px;
+                font-family: 'Wadik';
+                color: #D300CB;
+                transition: 0.5s;
+                font-size:16px;
+                &:hover{
+                    color: #00D36E;
+                    transition: 0.5s;
+                }
+                &-icon{
+                    &-pic{
+                        max-width:30px;
+                        height:auto;
+                        filter: invert(100%);
+                    }
+                }
+            }
+    
+        }
+        &__contacts_soc{
+            display: flex;
+            justify-content:space-between;
+        }
+        &__address{
+            &-txt{
+                font-family: 'Wadik';
+                color: #D300CB;
+            }
+        }
+    }
+}
+
+.menu{
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    canvas{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: none !important;
+    }
+    .container{
+        position: relative;
+        .menu__logo{
+            position: absolute;
+            top: 30vh;
+            width: 40%;
+        }
+        .menu__list{
+            list-style: none;
+            padding:0;
+            position:absolute;
+            right: 0;
+            top: 100px;
+            .menu__list-item{
+                margin-bottom: 20px;
+                .menu__list-item-link{
+                    color: white;
+                    font-family: 'FemmeFatale';
+                    font-size: 52px;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+        .menu__footer{
+            width: 84vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 90vh;
+            &-contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:16px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:30px;
+                            height:auto;
+                        }
+                    }
+                }
+        
+            }
+            .menu__footer-contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &-address{
+                &-txt{
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1399.99px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    ::selection {
+        background-color: #00D36E;
+        color: #fff;
+    }
+    
+    @font-face {
+        font-family: 'FemmeFatale';
+        src: url('assets/fonts/FemmeFatale-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Wadik';
+        src: url('assets/fonts/Wadik.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .container{
+        margin: 0 auto;
+        max-width: 82vw;
+    }
+    
+    a{
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1,h2,h3,p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header{
+        left: 0;
+        right: 0;
+        position: fixed;
+        margin: 0 auto;
+        width: 94vw;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        height: 80px;
+        z-index: 1000;
+        &__logo{
+            display: flex;
+            justify-content:space-between;
+            color: #D300CB;
+            align-items: center;
+            margin-left: 65px;
+            &-txt{
+                display: block;
+                font-family: 'FemmeFatale';
+                margin-left:10px;
+            }
+        }
+        &__button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            &-element{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &-element_last{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_last{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__button_closer{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            .header__button-element_closer{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        height: 100vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left:20vw;
+            top: -10vh;
+        }
+        &__middle{
+            display: flex;
+            justify-content:space-between;
+            padding-top:18vh;
+            &-base{
+                &-title{
+                    font-size: 80px;
+                    margin-bottom: 5vh;
+                    color:#D300CB;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-divider{
+                    height: 5px;
+                    width: 500px;
+                    display: block;
+                    background-color:#D300CB;
+                }
+                &-subtitle{
+                    font-size: 24px;
+                    margin-top:5vh;
+                    color: #D300CB;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+            }
+        }
+        &__bottom{
+            position: absolute;
+            text-align: center;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            &-subtitle{
+                font-size: 32px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                color: transparent;
+                -webkit-text-stroke: 0.25px #D300CB;
+            }
+            &-button{
+                border: none;
+                background: none;
+                margin-top:5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .about{
+        min-height: 100vh;
+        height: auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .about__blobs{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 50%;
+            top: 15%;
+        }
+        .container{
+            .about__title{
+                color: white;
+                padding-top: 60px;
+                font-size:26px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            .about__base{
+                padding-top:10vh;
+                padding-bottom:10vh;
+                &-element{
+                    border:1px solid white;
+                    width: 100%;
+                    min-height:100px;
+                    height: auto;
+                    margin-bottom: 42px;
+                    background-color: #2B002C;
+                    &-header{
+                        display:flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        padding: 25px 20px 50px 20px;
+                        &-title{
+                            color:white;
+                            font-size: 28px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-button{
+                            background-color:transparent;
+                            border: none;
+                            color:#D300CB;
+                            font-size:32px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                            cursor: pointer;
+                        }
+                    }
+                    &-txt{
+                        text-align:justify;
+                        padding: 0px 20px 20px 20px;
+                        color:white;
+                        font-size: 18px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .projects{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        display: flex;
+        height: 60vh;
+        &__card{
+            width:calc(100%/3);
+            background-color: #b603b0;
+            height: 100%;
+            &-pic{
+                width: 70%;
+                padding-top: 80px;
+                padding-left: 20px;
+            }
+            &-title{
+                font-family: 'Wadik';
+                color: rgb(255, 255, 255);
+                -webkit-text-stroke: 0.25px #000000;
+                padding-top: 20px;
+                padding-left: 20px;
+                font-size: 18px;
+            }
+            &-list{
+                padding: 0px;
+                margin: 0px;
+                padding-left: 20px;
+                padding-top: 20px;
+                list-style-type: none;
+                &-item{
+                    font-size:21px;
+                    padding-top: 5px;
+                    font-family: 'Wadik';
+                    color: white;
+                    -webkit-text-stroke: 0.25px #000000;
+                }
+            }
+        }
+        &__card_middle{
+            width:calc(100%/3);
+            background-color: #c952c5;
+            .projects__card-pic-middle{
+                width: 100%;
+                padding-left: 0px;
+                padding-top: 100px;
+            }
+        }
+        &__card_right{
+            width:calc(100%/3);
+            background-color: #680165;
+            .projects__card-pic-right{
+                width: 90%;
+                padding-left: 0px;
+                padding-right: 60px;
+                padding-top: 90px;
+            }
+        }
+    }
+    
+    .services{
+        height:auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        .container{
+            .services__base{
+                &-title{
+                    padding:60px 0px 30px 0px;
+                    color: white;
+                    font-size:26px;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-row{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 5vh;
+                    &-element{
+                        border: 1px solid white;
+                        width: 40vw;
+                        background-color: #2B002C;
+                        &-title{
+                            color: white;
+                            text-align: center;
+                            padding-top: 20px;
+                            font-size: 28px;
+                            font-family: 'FemmeFatale';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-list{
+                            color: white;
+                            list-style-image: url(assets/img/list.svg);
+                            padding: 20px 30px 20px 40px;
+                            margin: 0px;
+                            &-item{
+                                padding: 10px 0px 10px 0px;
+                                font-size: 18px;
+                                font-family: 'Wadik';
+                                letter-spacing: 0.01em;
+                                line-height: 129%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials{
+        height: 40vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        .socials__title{
+            font-size:26px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .socials__row{
+            display:flex;
+            justify-content:space-between;
+            padding:40px 0px 40px 0px;
+            &-link{
+                position: relative;
+                display: flex;
+                color:#D300CB;
+                font-size:40px;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition:0.5s;
+                &-pic{
+                    position: absolute;
+                    right: -25px;
+                    top: 10px;
+                    width: 15px;
+                    height: 15px;
+                    filter: invert(100%);
+                }
+                &:hover{
+                    color:#00D36E;
+                    transition:0.5s;
+                }
+            }
+        }
+    }
+    
+    .connect{
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .connect__title{
+            padding-top:60px;
+            color: white;
+            text-align: center;
+            font-size:42px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__form{
+            height: 100%;
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            &-bottom{
+                display: flex;
+                justify-content:space-between;
+                #connect__file{
+                    display: none;
+                    cursor: pointer;
+                }
+                &-button{
+                    display: block;
+                    background-color:#D300CB;
+                    border: 1px solid #D300CB;
+                    padding: 20px 50px 20px 50px;
+                    color: white;
+                    width: auto;
+                    font-family: 'Wadik';
+                    font-size:24px;
+                    margin: 0 auto;
+                    margin-bottom:20px;
+                    margin-top:40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: transparent;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &-input{
+                width:100%;
+                display: block;
+                color: white;
+                font-family: 'Wadik';
+                font-size: 24px;
+                line-height: 130%;
+                background: none;
+                outline: 0 transparent !important;
+                padding: 40px 0px 40px 0px;
+                border: none;
+                border-bottom: 1px solid white;
+            }
+            &-disclaimer{
+                font-family:'Wadik';
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                &-link{
+                    font-family:'Wadik';
+                    font-size: 18px;
+                    color: rgba(255, 255, 255, 0.524);
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #D300CB;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .contacts{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        position: relative;
+        height: 100vh;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        &__title{
+            font-size:26px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        &__subtitle{
+            font-size:32px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            margin-top: 20vh;
+        }
+        &__link{
+            font-size:32px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition: 0.5s;
+            &:hover{
+                color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+        .footer{
+            width: 84vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            &__contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:16px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:30px;
+                            height:auto;
+                            filter: invert(100%);
+                        }
+                    }
+                }
+        
+            }
+            &__contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &__address{
+                &-txt{
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                }
+            }
+        }
+    }
+    
+    .menu{
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            position: relative;
+            .menu__list{
+                list-style: none;
+                padding:0;
+                position:absolute;
+                right: 0;
+                top: 100px;
+                .menu__list-item{
+                    margin-bottom: 20px;
+                    .menu__list-item-link{
+                        color: white;
+                        font-family: 'FemmeFatale';
+                        font-size: 42px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .menu__footer{
+                width: 84vw;
+                margin: 0 auto;
+                display: flex;
+                justify-content:space-between;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 90vh;
+                &-contacts{
+                    width: 220px;
+                    &-link{
+                        display: block;
+                        margin-bottom:15px;
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        transition: 0.5s;
+                        font-size:16px;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                        &-icon{
+                            &-pic{
+                                max-width:30px;
+                                height:auto;
+                            }
+                        }
+                    }
+            
+                }
+                .menu__footer-contacts_soc{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                &-address{
+                    &-txt{
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 765px) and (max-width: 1023.99px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    ::selection {
+        background-color: #00D36E;
+        color: #fff;
+    }
+    
+    @font-face {
+        font-family: 'FemmeFatale';
+        src: url('assets/fonts/FemmeFatale-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Wadik';
+        src: url('assets/fonts/Wadik.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .container{
+        margin: 0 auto;
+        max-width: 80vw;
+    }
+    
+    a{
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1,h2,h3,p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header{
+        left: 0;
+        right: 0;
+        position: fixed;
+        margin: 0 auto;
+        width: 94vw;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        height: 80px;
+        z-index: 1000;
+        &__logo{
+            display: flex;
+            justify-content:space-between;
+            color: #D300CB;
+            align-items: center;
+            margin-left: 50px;
+            &-txt{
+                display: block;
+                font-family: 'FemmeFatale';
+                margin-left:10px;
+            }
+        }
+        &__button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            &-element{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &-element_last{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_last{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__button_closer{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            .header__button-element_closer{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        height: 100vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0vh;
+            left: 15vw;
+        }
+        &__middle{
+            display: flex;
+            justify-content:space-between;
+            padding-top:18vh;
+            &-base{
+                &-title{
+                    font-size: 64px;
+                    margin-bottom: 5vh;
+                    color:#D300CB;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-divider{
+                    height: 5px;
+                    width: 400px;
+                    display: block;
+                    background-color:#D300CB;
+                }
+                &-subtitle{
+                    width: 400px;
+                    font-size: 20px;
+                    margin-top:5vh;
+                    color: #D300CB;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+            }
+        }
+        &__bottom{
+            position: absolute;
+            text-align: center;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            &-subtitle{
+                font-size: 32px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                color: transparent;
+                -webkit-text-stroke: 0.25px #D300CB;
+            }
+            &-button{
+                border: none;
+                background: none;
+                margin-top:5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .about{
+        min-height: 100vh;
+        height: auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .about__blobs{
+            top: 10vh;
+            width: 70%;
+        }
+        .container{
+            .about__title{
+                color: white;
+                padding-top: 60px;
+                font-size:26px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            .about__base{
+                padding-top:10vh;
+                padding-bottom:10vh;
+                &-element{
+                    border:1px solid white;
+                    width: 100%;
+                    min-height:100px;
+                    height: auto;
+                    margin-bottom: 42px;
+                    background-color: #2B002C;
+                    &-header{
+                        display:flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        padding: 25px 20px 50px 20px;
+                        &-title{
+                            color:white;
+                            font-size: 28px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-button{
+                            background-color:transparent;
+                            border: none;
+                            color:#D300CB;
+                            font-size:32px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                            cursor: pointer;
+                        }
+                    }
+                    &-txt{
+                        text-align:justify;
+                        padding: 0px 20px 20px 20px;
+                        color:white;
+                        font-size: 18px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .projects{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        display: flex;
+        height: 60vh;
+        &__card{
+            width:calc(100%/3);
+            background-color: #b603b0;
+            height: 100%;
+            &-pic{
+                width: 100%;
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+            &-title{
+                font-family: 'Wadik';
+                color: rgb(255, 255, 255);
+                -webkit-text-stroke: 0.25px #000000;
+                padding-top: 20px;
+                padding-left: 20px;
+                font-size: 18px;
+            }
+            &-list{
+                padding: 0px;
+                margin: 0px;
+                padding-left: 20px;
+                padding-top: 20px;
+                list-style-type: none;
+                &-item{
+                    font-size:21px;
+                    padding-top: 5px;
+                    font-family: 'Wadik';
+                    color: white;
+                    -webkit-text-stroke: 0.25px #000000;
+                }
+            }
+        }
+        &__card_middle{
+            width:calc(100%/3);
+            background-color: #c952c5;
+            .projects__card-pic-middle{
+                width: 100%;
+                padding-left: 0px;
+                padding-top: 140px;
+            }
+        }
+        &__card_right{
+            width:calc(100%/3);
+            background-color: #680165;
+            .projects__card-pic-right{
+                width: 100%;
+                padding-left: 0px;
+                padding-right: 120px;
+                padding-top: 120px;
+            }
+        }
+    }
+    
+    .services{
+        height:auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        canvas{
+            position: absolute;
+            height: 50%;
+            width: 50%;
+        }
+        .container{
+            .services__base{
+                &-title{
+                    padding:60px 0px 30px 0px;
+                    color: white;
+                    font-size:26px;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-row{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 5vh;
+                    &-element{
+                        border: 1px solid white;
+                        width: 38vw;
+                        background-color: #2B002C;
+                        &-title{
+                            color: white;
+                            text-align: center;
+                            padding-top: 20px;
+                            font-size: 24px;
+                            font-family: 'FemmeFatale';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-list{
+                            color: white;
+                            list-style-image: url(assets/img/list.svg);
+                            padding: 20px 30px 20px 40px;
+                            margin: 0px;
+                            &-item{
+                                padding: 10px 0px 10px 0px;
+                                font-size: 16px;
+                                font-family: 'Wadik';
+                                letter-spacing: 0.01em;
+                                line-height: 129%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials{
+        height: 40vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        .socials__title{
+            font-size:26px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .socials__row{
+            display:flex;
+            justify-content:space-between;
+            padding:40px 0px 40px 0px;
+            &-link{
+                position: relative;
+                display: flex;
+                color:#D300CB;
+                font-size:28px;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition:0.5s;
+                &-pic{
+                    position: absolute;
+                    right: -25px;
+                    top: 10px;
+                    width: 15px;
+                    height: 15px;
+                    filter: invert(100%);
+                }
+                &:hover{
+                    color:#00D36E;
+                    transition:0.5s;
+                }
+            }
+        }
+    }
+    
+    .connect{
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .connect__title{
+            padding-top:60px;
+            color: white;
+            text-align: center;
+            font-size:34px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__form{
+            height: 100%;
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            &-bottom{
+                display: flex;
+                justify-content:space-between;
+                #connect__file{
+                    display: none;
+                    cursor: pointer;
+                }
+                &-button{
+                    display: block;
+                    background-color:#D300CB;
+                    border: 1px solid #D300CB;
+                    padding: 20px 50px 20px 50px;
+                    color: white;
+                    width: auto;
+                    font-family: 'Wadik';
+                    font-size:24px;
+                    margin: 0 auto;
+                    margin-bottom:20px;
+                    margin-top:40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: transparent;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &-input{
+                width:100%;
+                display: block;
+                color: white;
+                font-family: 'Wadik';
+                font-size: 18px;
+                line-height: 130%;
+                background: none;
+                outline: 0 transparent !important;
+                padding: 40px 0px 20px 0px;
+                border: none;
+                border-bottom: 1px solid white;
+            }
+            &-disclaimer{
+                font-family:'Wadik';
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                &-link{
+                    font-family:'Wadik';
+                    font-size: 18px;
+                    color: rgba(255, 255, 255, 0.524);
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #D300CB;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .contacts{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        position: relative;
+        height: 100vh;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        &__title{
+            font-size:26px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        &__subtitle{
+            font-size:24px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            margin-top: 20vh;
+        }
+        &__link{
+            font-size:24px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition: 0.5s;
+            &:hover{
+                color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+        .footer{
+            width: 84vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            flex-direction: column;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            &__contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:16px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:25px;
+                            height:auto;
+                            filter: invert(100%);
+                        }
+                    }
+                }
+        
+            }
+            &__contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &__address{
+                &-txt{
+                    font-size: 16px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    
+    .menu{
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        .container{
+            position: relative;
+            .menu__logo{
+                position: absolute;
+                top: 35vh;
+                width: 40%;
+            }
+            .menu__list{
+                list-style: none;
+                padding:0;
+                position:absolute;
+                right: 0;
+                top: 200px;
+                .menu__list-item{
+                    margin-bottom: 20px;
+                    .menu__list-item-link{
+                        color: white;
+                        font-family: 'FemmeFatale';
+                        font-size: 32px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .menu__footer{
+                width: 84vw;
+                margin: 0 auto;
+                display: flex;
+                justify-content:space-between;
+                position: absolute;
+                flex-direction: column;
+                left: 0;
+                right: 0;
+                top: 75vh;
+                &-contacts{
+                    width: 200px;
+                    &-link{
+                        display: block;
+                        margin-bottom:15px;
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        transition: 0.5s;
+                        font-size:16px;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                        &-icon{
+                            &-pic{
+                                max-width:25px;
+                                height:auto;
+                            }
+                        }
+                    }
+            
+                }
+                .menu__footer-contacts_soc{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                &-address{
+                    &-txt{
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 425px) and (max-width: 764.99px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    ::selection {
+        background-color: #00D36E;
+        color: #fff;
+    }
+    
+    @font-face {
+        font-family: 'FemmeFatale';
+        src: url('assets/fonts/FemmeFatale-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Wadik';
+        src: url('assets/fonts/Wadik.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .container{
+        margin: 0 auto;
+        max-width: 85vw;
+    }
+    
+    a{
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1,h2,h3,p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header{
+        left: 0;
+        right: 0;
+        position: fixed;
+        margin: 0 auto;
+        width: 94vw;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        height: 80px;
+        z-index: 1000;
+        &__logo{
+            display: flex;
+            justify-content:space-between;
+            color: #D300CB;
+            align-items: center;
+            margin-left: 0px !important;
+            &-txt{
+                display: block;
+                font-family: 'FemmeFatale';
+                margin-left:10px;
+                font-size: 18px;
+            }
+        }
+        &__button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            &-element{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &-element_last{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_last{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__button_closer{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            .header__button-element_closer{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        height: 100vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0vh;
+            left: 10vw;
+            z-index: -1;
+        }
+        &__middle{
+            display: flex;
+            justify-content:space-between;
+            padding-top:18vh;
+            &-base{
+                &-title{
+                    font-size: 42px;
+                    margin-bottom: 5vh;
+                    color:#D300CB;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-divider{
+                    height: 5px;
+                    width: 200px;
+                    display: block;
+                    background-color:#D300CB;
+                }
+                &-subtitle{
+                    width: 300px;
+                    font-size: 18px;
+                    margin-top:5vh;
+                    color: #D300CB;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+            }
+        }
+        &__bottom{
+            position: absolute;
+            text-align: center;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            &-subtitle{
+                font-size: 32px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                color: transparent;
+                -webkit-text-stroke: 0.25px #D300CB;
+            }
+            &-button{
+                border: none;
+                background: none;
+                margin-top:5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .about{
+        min-height: 100vh;
+        height: auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .about__blobs{
+            width: 100%;
+            top: 15vh;
+        }
+        .container{
+            .about__title{
+                color: white;
+                padding-top: 60px;
+                font-size:21px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            .about__base{
+                padding-top:10vh;
+                padding-bottom:10vh;
+                &-element{
+                    border:1px solid white;
+                    width: 100%;
+                    min-height:100px;
+                    height: auto;
+                    margin-bottom: 42px;
+                    background-color: #2B002C;
+                    &-header{
+                        display:flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        padding: 25px 20px 50px 20px;
+                        &-title{
+                            color:white;
+                            font-size: 20px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-button{
+                            background-color:transparent;
+                            border: none;
+                            color:#D300CB;
+                            font-size:32px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                            cursor: pointer;
+                        }
+                    }
+                    &-txt{
+                        text-align:left;
+                        padding: 0px 20px 20px 20px;
+                        color:white;
+                        font-size: 18px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.20em;
+                        line-height: 135%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .projects{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        &__card{
+            width:100%;
+            background-color: #b603b0;
+            height: 540px;
+            &-pic{
+                width: 80%;
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+            &-title{
+                font-family: 'Wadik';
+                color: rgb(255, 255, 255);
+                -webkit-text-stroke: 0.25px #000000;
+                padding-top: 20px;
+                padding-left: 20px;
+                font-size: 26px;
+            }
+            &-list{
+                padding: 0px;
+                margin: 0px;
+                padding-left: 20px;
+                padding-top: 20px;
+                list-style-type: none;
+                &-item{
+                    font-size:28px;
+                    padding-top: 5px;
+                    font-family: 'Wadik';
+                    color: white;
+                    -webkit-text-stroke: 0.25px #000000;
+                }
+            }
+        }
+        &__card_middle{
+            width:100%;
+            background-color: #c952c5;
+            .projects__card-pic-middle{
+                width: 100%;
+                padding-left: 0px;
+                padding-top: 90px;
+            }
+        }
+        &__card_right{
+            width:100%;
+            background-color: #680165;
+            .projects__card-pic-right{
+                width: 80%;
+                padding-left: 0px;
+                padding-right: 100px;
+                padding-top: 80px;
+            }
+        }
+    }
+    
+    .services{
+        height:auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        .container{
+            .services__base{
+                &-title{
+                    padding:60px 0px 30px 0px;
+                    color: white;
+                    font-size:21px;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-row{
+                    display: flex;
+                    justify-content:flex-start;
+                    padding-bottom: 0vh;
+                    flex-direction: column;
+                    &-element{
+                        border: 1px solid white;
+                        width: 100%;
+                        background-color: #2B002C;
+                        margin-bottom: 20px;
+                        &-title{
+                            color: white;
+                            text-align: center;
+                            padding-top: 20px;
+                            font-size: 24px;
+                            font-family: 'FemmeFatale';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-list{
+                            color: white;
+                            list-style-image: url(assets/img/list.svg);
+                            padding: 20px 30px 20px 40px;
+                            margin: 0px;
+                            &-item{
+                                padding: 10px 0px 10px 0px;
+                                font-size: 16px;
+                                font-family: 'Wadik';
+                                letter-spacing: 0.01em;
+                                line-height: 129%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials{
+        height: 45vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        .socials__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .socials__row{
+            display:flex;
+            justify-content:space-between;
+            padding:40px 0px 40px 0px;
+            flex-direction: column;
+            &-link{
+                position: relative;
+                display: flex;
+                color:#D300CB;
+                font-size:26px;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition:0.5s;
+                padding-bottom: 20px;
+                &-pic{
+                    display: none;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 15px;
+                    height: 15px;
+                    filter: invert(100%);
+                }
+                &:hover{
+                    color:#00D36E;
+                    transition:0.5s;
+                }
+            }
+        }
+    }
+    
+    .connect{
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        .connect__success{
+            color:#00D36E;
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 21px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__error{
+            color: rgb(247, 111, 111);
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 21px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__title{
+            padding-top:60px;
+            color: white;
+            text-align: center;
+            font-size:34px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__form{
+            height: 100%;
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            &-bottom{
+                display: flex;
+                justify-content:space-between;
+                #connect__file{
+                    display: none;
+                    cursor: pointer;
+                }
+                &-button{
+                    display: block;
+                    background-color:#D300CB;
+                    border: 1px solid #D300CB;
+                    padding: 20px 50px 20px 50px;
+                    color: white;
+                    width: auto;
+                    font-family: 'Wadik';
+                    font-size:24px;
+                    margin: 0 auto;
+                    margin-bottom:20px;
+                    margin-top:40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: transparent;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &-input{
+                width:100%;
+                display: block;
+                color: white;
+                font-family: 'Wadik';
+                font-size: 18px;
+                line-height: 130%;
+                background: none;
+                outline: 0 transparent !important;
+                padding: 40px 0px 20px 0px;
+                border: none;
+                border-bottom: 1px solid white;
+            }
+            &-disclaimer{
+                font-family:'Wadik';
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                &-link{
+                    font-family:'Wadik';
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.524);
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #D300CB;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .contacts{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        position: relative;
+        height: 100vh;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        &__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        &__subtitle{
+            font-size:18px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            margin-top: 20vh;
+        }
+        &__link{
+            width: 350px;
+            font-size:18px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition: 0.5s;
+            &:hover{
+                color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+        .footer{
+            width: 82vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            &__contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:16px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:25px;
+                            height:auto;
+                            filter: invert(100%);
+                        }
+                    }
+                }
+        
+            }
+            &__contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &__address{
+                &-txt{
+                    font-size: 16px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    
+    .menu{
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            position: relative;
+            .menu__logo{
+                position: absolute;
+                top: 40vh;
+                width: 40%;
+            }
+            .menu__list{
+                list-style: none;
+                padding:0;
+                position:absolute;
+                right: 0;
+                top: 220px;
+                .menu__list-item{
+                    margin-bottom: 20px;
+                    .menu__list-item-link{
+                        color: white;
+                        font-family: 'FemmeFatale';
+                        font-size: 21px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .menu__footer{
+                width: 84vw;
+                margin: 0 auto;
+                display: flex;
+                justify-content:space-between;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 75vh;
+                &-contacts{
+                    width: 220px;
+                    &-link{
+                        display: block;
+                        margin-bottom:15px;
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        transition: 0.5s;
+                        font-size:16px;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                        &-icon{
+                            &-pic{
+                                max-width:25px;
+                                height:auto;
+                            }
+                        }
+                    }
+            
+                }
+                .menu__footer-contacts_soc{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                &-address{
+                    &-txt{
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 375px) and (max-width: 424.99px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    ::selection {
+        background-color: #00D36E;
+        color: #fff;
+    }
+    
+    @font-face {
+        font-family: 'FemmeFatale';
+        src: url('assets/fonts/FemmeFatale-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Wadik';
+        src: url('assets/fonts/Wadik.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .container{
+        margin: 0 auto;
+        max-width: 85vw;
+    }
+    
+    a{
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1,h2,h3,p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header{
+        left: 0;
+        right: 0;
+        position: fixed;
+        margin: 0 auto;
+        width: 94vw;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        height: 80px;
+        z-index: 1000;
+        &__logo{
+            display: flex;
+            justify-content:space-between;
+            color: #D300CB;
+            align-items: center;
+            margin-left: 0px !important;
+            &-txt{
+                display: block;
+                font-family: 'FemmeFatale';
+                margin-left:10px;
+                font-size: 18px;
+            }
+        }
+        &__button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            &-element{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &-element_last{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_last{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__button_closer{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            .header__button-element_closer{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        height: 100vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 10vh;
+            left: 33vw;
+            z-index: -1;
+        }
+        &__middle{
+            display: flex;
+            justify-content:space-between;
+            padding-top:18vh;
+            &-base{
+                &-title{
+                    font-size: 42px;
+                    margin-bottom: 5vh;
+                    color:#D300CB;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-divider{
+                    height: 5px;
+                    width: 200px;
+                    display: block;
+                    background-color:#D300CB;
+                }
+                &-subtitle{
+                    width: 300px;
+                    font-size: 18px;
+                    margin-top:5vh;
+                    color: #D300CB;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.10em;
+                    line-height: 135%;
+                }
+            }
+        }
+        &__bottom{
+            position: absolute;
+            text-align: center;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            &-subtitle{
+                font-size: 32px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                width: 200px;
+                line-height: 129%;
+                color: transparent;
+                -webkit-text-stroke: 0.25px #D300CB;
+                margin: 0 auto;
+            }
+            &-button{
+                border: none;
+                background: none;
+                margin-top:5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .about{
+        min-height: 100vh;
+        height: auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .about__blobs{
+            width: 100%;
+            top: 25vh;
+        }
+        .container{
+            .about__title{
+                color: white;
+                padding-top: 60px;
+                font-size:21px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            .about__base{
+                padding-top:10vh;
+                padding-bottom:10vh;
+                &-element{
+                    border:1px solid white;
+                    width: 100%;
+                    min-height:100px;
+                    height: auto;
+                    margin-bottom: 42px;
+                    background-color: #2B002C;
+                    &-header{
+                        display:flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        padding: 25px 20px 50px 20px;
+                        &-title{
+                            color:white;
+                            font-size: 20px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-button{
+                            background-color:transparent;
+                            border: none;
+                            color:#D300CB;
+                            font-size:32px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                            cursor: pointer;
+                        }
+                    }
+                    &-txt{
+                        text-align:left;
+                        padding: 0px 20px 20px 20px;
+                        color:white;
+                        font-size: 18px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .projects{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        &__card{
+            width:100%;
+            background-color: #b603b0;
+            height: 520px;
+            &-pic{
+                width: 80%;
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+            &-title{
+                font-family: 'Wadik';
+                color: rgb(255, 255, 255);
+                -webkit-text-stroke: 0.25px #000000;
+                padding-top: 20px;
+                padding-left: 20px;
+                font-size: 26px;
+            }
+            &-list{
+                padding: 0px;
+                margin: 0px;
+                padding-left: 20px;
+                padding-top: 20px;
+                list-style-type: none;
+                &-item{
+                    font-size:28px;
+                    padding-top: 5px;
+                    font-family: 'Wadik';
+                    color: white;
+                    -webkit-text-stroke: 0.25px #000000;
+                }
+            }
+        }
+        &__card_middle{
+            width:100%;
+            background-color: #c952c5;
+            .projects__card-pic-middle{
+                width: 100%;
+                padding-left: 0px;
+                padding-top: 90px;
+            }
+        }
+        &__card_right{
+            width:100%;
+            background-color: #680165;
+            .projects__card-pic-right{
+                width: 100%;
+                padding-left: 0px;
+                padding-right: 100px;
+                padding-top: 80px;
+            }
+        }
+    }
+    
+    .services{
+        height:auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        canvas{
+            display: none !important;
+            position: absolute;
+            height: 50%;
+            width: 50%;
+        }
+        .container{
+            .services__base{
+                &-title{
+                    padding:60px 0px 30px 0px;
+                    color: white;
+                    font-size:21px;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-row{
+                    display: flex;
+                    justify-content:flex-start;
+                    padding-bottom: 0vh;
+                    flex-direction: column;
+                    &-element{
+                        border: 1px solid white;
+                        width: 100%;
+                        background-color: #2B002C;
+                        margin-bottom: 20px;
+                        &-title{
+                            color: white;
+                            text-align: center;
+                            padding-top: 20px;
+                            font-size: 24px;
+                            font-family: 'FemmeFatale';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-list{
+                            color: white;
+                            list-style-image: url(assets/img/list.svg);
+                            padding: 20px 30px 20px 40px;
+                            margin: 0px;
+                            &-item{
+                                padding: 10px 0px 10px 0px;
+                                font-size: 16px;
+                                font-family: 'Wadik';
+                                letter-spacing: 0.01em;
+                                line-height: 129%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials{
+        height: 50vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        .socials__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .socials__row{
+            display:flex;
+            justify-content:space-between;
+            padding:40px 0px 40px 0px;
+            flex-direction: column;
+            &-link{
+                position: relative;
+                display: flex;
+                color:#D300CB;
+                font-size:26px;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition:0.5s;
+                padding-bottom: 20px;
+                &-pic{
+                    display: none;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 15px;
+                    height: 15px;
+                    filter: invert(100%);
+                }
+                &:hover{
+                    color:#00D36E;
+                    transition:0.5s;
+                }
+            }
+        }
+    }
+    
+    .connect{
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        .connect__success{
+            color:#00D36E;
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 21px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__error{
+            color: rgb(247, 111, 111);
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 21px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__title{
+            padding-top:60px;
+            color: white;
+            text-align: center;
+            font-size:34px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__form{
+            height: 100%;
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            &-bottom{
+                display: flex;
+                justify-content:space-between;
+                #connect__file{
+                    display: none;
+                    cursor: pointer;
+                }
+                &-button{
+                    display: block;
+                    background-color:#D300CB;
+                    border: 1px solid #D300CB;
+                    padding: 20px 30px 20px 30px;
+                    color: white;
+                    width: auto;
+                    font-family: 'Wadik';
+                    font-size:24px;
+                    margin: 0 auto;
+                    margin-bottom:20px;
+                    margin-top:40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: transparent;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &-input{
+                width:100%;
+                display: block;
+                color: white;
+                font-family: 'Wadik';
+                font-size: 18px;
+                line-height: 130%;
+                background: none;
+                outline: 0 transparent !important;
+                padding: 40px 0px 20px 0px;
+                border: none;
+                border-bottom: 1px solid white;
+            }
+            &-disclaimer{
+                font-family:'Wadik';
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                &-link{
+                    font-family:'Wadik';
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.524);
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #D300CB;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .contacts{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        position: relative;
+        height: 100vh;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        &__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        &__subtitle{
+            font-size:16px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            margin-top: 20vh;
+        }
+        &__link{
+            width: 350px;
+            font-size:14px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition: 0.5s;
+            &:hover{
+                color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+        .footer{
+            width: 82vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            &__contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:14px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:25px;
+                            height:auto;
+                            filter: invert(100%);
+                        }
+                    }
+                }
+        
+            }
+            &__contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &__address{
+                &-txt{
+                    font-size: 14px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    
+    .menu{
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        .container{
+            position: relative;
+            .menu__logo{
+                position: absolute;
+                top: 30vh;
+                width: 40%;
+                display: none;
+            }
+            .menu__list{
+                list-style: none;
+                padding:0;
+                position:absolute;
+                right: 0;
+                margin: 0 auto;
+                left: 0;
+                top: 220px;
+                text-align: center;
+                .menu__list-item{
+                    margin-bottom: 20px;
+                    .menu__list-item-link{
+                        color: white;
+                        font-family: 'FemmeFatale';
+                        font-size: 21px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .menu__footer{
+                width: 84vw;
+                margin: 0 auto;
+                display: flex;
+                justify-content:space-between;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 75vh;
+                &-contacts{
+                    width: 220px;
+                    &-link{
+                        display: block;
+                        margin-bottom:15px;
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        transition: 0.5s;
+                        font-size:14px;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                        &-icon{
+                            &-pic{
+                                max-width:25px;
+                                height:auto;
+                            }
+                        }
+                    }
+            
+                }
+                .menu__footer-contacts_soc{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                &-address{
+                    &-txt{
+                        font-family: 'Wadik';
+                        font-size:14px;
+                        color: #D300CB;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 350px) and (max-width: 374.99px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    ::selection {
+        background-color: #00D36E;
+        color: #fff;
+    }
+    
+    @font-face {
+        font-family: 'FemmeFatale';
+        src: url('assets/fonts/FemmeFatale-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Wadik';
+        src: url('assets/fonts/Wadik.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .container{
+        margin: 0 auto;
+        max-width: 85vw;
+    }
+    
+    a{
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1,h2,h3,p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header{
+        left: 0;
+        right: 0;
+        position: fixed;
+        margin: 0 auto;
+        width: 94vw;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        height: 80px;
+        z-index: 1000;
+        &__logo{
+            display: flex;
+            justify-content:space-between;
+            color: #D300CB;
+            align-items: center;
+            margin-left: 0px !important;
+            &-txt{
+                display: block;
+                font-family: 'FemmeFatale';
+                margin-left:10px;
+                font-size: 18px;
+            }
+        }
+        &__button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            &-element{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &-element_last{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_last{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__button_closer{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            .header__button-element_closer{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        height: 100vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 10vh;
+            left: 33vw;
+            z-index: -1;
+        }
+        &__middle{
+            display: flex;
+            justify-content:space-between;
+            padding-top:18vh;
+            &-base{
+                &-title{
+                    font-size: 42px;
+                    margin-bottom: 5vh;
+                    color:#D300CB;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-divider{
+                    height: 5px;
+                    width: 200px;
+                    display: block;
+                    background-color:#D300CB;
+                }
+                &-subtitle{
+                    width: 300px;
+                    font-size: 18px;
+                    margin-top:5vh;
+                    color: #D300CB;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.10em;
+                    line-height: 135%;
+                }
+            }
+        }
+        &__bottom{
+            position: absolute;
+            text-align: center;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            &-subtitle{
+                font-size: 32px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                width: 200px;
+                line-height: 129%;
+                color: transparent;
+                -webkit-text-stroke: 0.25px #D300CB;
+                margin: 0 auto;
+            }
+            &-button{
+                border: none;
+                background: none;
+                margin-top:5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .about{
+        min-height: 100vh;
+        height: auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .about__blobs{
+            width: 100%;
+            top: 25vh;
+        }
+        .container{
+            .about__title{
+                color: white;
+                padding-top: 60px;
+                font-size:21px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            .about__base{
+                padding-top:10vh;
+                padding-bottom:10vh;
+                &-element{
+                    border:1px solid white;
+                    width: 100%;
+                    min-height:100px;
+                    height: auto;
+                    margin-bottom: 42px;
+                    background-color: #2B002C;
+                    &-header{
+                        display:flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        padding: 25px 20px 50px 20px;
+                        &-title{
+                            color:white;
+                            font-size: 20px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-button{
+                            background-color:transparent;
+                            border: none;
+                            color:#D300CB;
+                            font-size:32px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                            cursor: pointer;
+                        }
+                    }
+                    &-txt{
+                        text-align:left;
+                        padding: 0px 20px 20px 20px;
+                        color:white;
+                        font-size: 18px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .projects{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        &__card{
+            width:100%;
+            background-color: #b603b0;
+            height: 520px;
+            &-pic{
+                width: 80%;
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+            &-title{
+                font-family: 'Wadik';
+                color: rgb(255, 255, 255);
+                -webkit-text-stroke: 0.25px #000000;
+                padding-top: 20px;
+                padding-left: 20px;
+                font-size: 26px;
+            }
+            &-list{
+                padding: 0px;
+                margin: 0px;
+                padding-left: 20px;
+                padding-top: 20px;
+                list-style-type: none;
+                &-item{
+                    font-size:28px;
+                    padding-top: 5px;
+                    font-family: 'Wadik';
+                    color: white;
+                    -webkit-text-stroke: 0.25px #000000;
+                }
+            }
+        }
+        &__card_middle{
+            width:100%;
+            background-color: #c952c5;
+            .projects__card-pic-middle{
+                width: 100%;
+                padding-left: 0px;
+                padding-top: 120px;
+            }
+        }
+        &__card_right{
+            width:100%;
+            background-color: #680165;
+            .projects__card-pic-right{
+                width: 100%;
+                padding-left: 0px;
+                padding-right: 100px;
+                padding-top: 80px;
+            }
+        }
+    }
+    
+    .services{
+        height:auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        canvas{
+            display: none !important;
+            position: absolute;
+            height: 50%;
+            width: 50%;
+        }
+        .container{
+            .services__base{
+                &-title{
+                    padding:60px 0px 30px 0px;
+                    color: white;
+                    font-size:21px;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-row{
+                    display: flex;
+                    justify-content:flex-start;
+                    padding-bottom: 0vh;
+                    flex-direction: column;
+                    &-element{
+                        border: 1px solid white;
+                        width: 100%;
+                        background-color: #2B002C;
+                        margin-bottom: 20px;
+                        &-title{
+                            color: white;
+                            text-align: center;
+                            padding-top: 20px;
+                            font-size: 24px;
+                            font-family: 'FemmeFatale';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-list{
+                            color: white;
+                            list-style-image: url(assets/img/list.svg);
+                            padding: 20px 30px 20px 40px;
+                            margin: 0px;
+                            &-item{
+                                padding: 10px 0px 10px 0px;
+                                font-size: 16px;
+                                font-family: 'Wadik';
+                                letter-spacing: 0.01em;
+                                line-height: 129%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials{
+        height: 50vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        .socials__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .socials__row{
+            display:flex;
+            justify-content:space-between;
+            padding:40px 0px 40px 0px;
+            flex-direction: column;
+            &-link{
+                position: relative;
+                display: flex;
+                color:#D300CB;
+                font-size:26px;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition:0.5s;
+                padding-bottom: 20px;
+                &-pic{
+                    display: none;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 15px;
+                    height: 15px;
+                    filter: invert(100%);
+                }
+                &:hover{
+                    color:#00D36E;
+                    transition:0.5s;
+                }
+            }
+        }
+    }
+    
+    .connect{
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        .connect__success{
+            color:#00D36E;
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 21px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__error{
+            color: rgb(247, 111, 111);
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 21px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__title{
+            padding-top:60px;
+            color: white;
+            text-align: center;
+            font-size:34px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__form{
+            height: 100%;
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            &-bottom{
+                display: flex;
+                justify-content:space-between;
+                #connect__file{
+                    display: none;
+                    cursor: pointer;
+                }
+                &-button{
+                    display: block;
+                    background-color:#D300CB;
+                    border: 1px solid #D300CB;
+                    padding: 20px 30px 20px 30px;
+                    color: white;
+                    width: auto;
+                    font-family: 'Wadik';
+                    font-size:24px;
+                    margin: 0 auto;
+                    margin-bottom:20px;
+                    margin-top:40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: transparent;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &-input{
+                width:100%;
+                display: block;
+                color: white;
+                font-family: 'Wadik';
+                font-size: 18px;
+                line-height: 130%;
+                background: none;
+                outline: 0 transparent !important;
+                padding: 40px 0px 20px 0px;
+                border: none;
+                border-bottom: 1px solid white;
+            }
+            &-disclaimer{
+                font-family:'Wadik';
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                &-link{
+                    font-family:'Wadik';
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.524);
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #D300CB;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .contacts{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        position: relative;
+        height: 100vh;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        &__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        &__subtitle{
+            font-size:16px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            margin-top: 20vh;
+        }
+        &__link{
+            width: 350px;
+            font-size:14px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition: 0.5s;
+            &:hover{
+                color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+        .footer{
+            width: 82vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            &__contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:14px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:25px;
+                            height:auto;
+                            filter: invert(100%);
+                        }
+                    }
+                }
+        
+            }
+            &__contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &__address{
+                &-txt{
+                    font-size: 14px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    
+    .menu{
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        .container{
+            position: relative;
+            .menu__logo{
+                position: absolute;
+                top: 30vh;
+                width: 40%;
+                display: none;
+            }
+            .menu__list{
+                list-style: none;
+                padding:0;
+                position:absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                top: 220px;
+                .menu__list-item{
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .menu__list-item-link{
+                        color: white;
+                        font-family: 'FemmeFatale';
+                        font-size: 21px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .menu__footer{
+                width: 84vw;
+                margin: 0 auto;
+                display: flex;
+                justify-content:space-between;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 75vh;
+                &-contacts{
+                    width: 220px;
+                    &-link{
+                        display: block;
+                        margin-bottom:15px;
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        transition: 0.5s;
+                        font-size:14px;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                        &-icon{
+                            &-pic{
+                                max-width:25px;
+                                height:auto;
+                            }
+                        }
+                    }
+            
+                }
+                .menu__footer-contacts_soc{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                &-address{
+                    &-txt{
+                        font-family: 'Wadik';
+                        font-size:14px;
+                        color: #D300CB;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 325px) and (max-width: 349.99px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    ::selection {
+        background-color: #00D36E;
+        color: #fff;
+    }
+    
+    @font-face {
+        font-family: 'FemmeFatale';
+        src: url('assets/fonts/FemmeFatale-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Wadik';
+        src: url('assets/fonts/Wadik.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .container{
+        margin: 0 auto;
+        max-width: 85vw;
+    }
+    
+    a{
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1,h2,h3,p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header{
+        left: 0;
+        right: 0;
+        position: fixed;
+        margin: 0 auto;
+        width: 94vw;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        height: 80px;
+        z-index: 1000;
+        &__logo{
+            display: flex;
+            justify-content:space-between;
+            color: #D300CB;
+            align-items: center;
+            margin-left: 0px !important;
+            &-txt{
+                display: block;
+                font-family: 'FemmeFatale';
+                margin-left:10px;
+                font-size: 18px;
+            }
+        }
+        &__button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            &-element{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &-element_last{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 0px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_last{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__button_closer{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+            .header__button-element_closer{
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: #D300CB;
+                margin-bottom: 5px;
+                transition: 0.5s;
+            }
+            &:hover{
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+                .header__button-element_closer{
+                    background-color: #00D36E;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+    .main{
+        position: relative;
+        height: 100vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 10vh;
+            left: 36vw;
+            z-index: -1;
+        }
+        &__middle{
+            display: flex;
+            justify-content:space-between;
+            padding-top:18vh;
+            &-base{
+                &-title{
+                    font-size: 42px;
+                    margin-bottom: 5vh;
+                    color:#D300CB;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-divider{
+                    height: 5px;
+                    width: 200px;
+                    display: block;
+                    background-color:#D300CB;
+                }
+                &-subtitle{
+                    width: 300px;
+                    font-size: 18px;
+                    margin-top:5vh;
+                    color: #D300CB;
+                    font-family: 'Wadik';
+                    letter-spacing: 0.10em;
+                    line-height: 135%;
+                }
+            }
+        }
+        &__bottom{
+            position: absolute;
+            text-align: center;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            &-subtitle{
+                font-size: 32px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                width: 200px;
+                line-height: 129%;
+                color: transparent;
+                -webkit-text-stroke: 0.25px #D300CB;
+                margin: 0 auto;
+            }
+            &-button{
+                border: none;
+                background: none;
+                margin-top:5px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .about{
+        min-height: 100vh;
+        height: auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        .about__blobs{
+            width: 100%;
+            top: 25vh;
+        }
+        .container{
+            .about__title{
+                color: white;
+                padding-top: 60px;
+                font-size:21px;
+                font-family: 'FemmeFatale';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+            }
+            .about__base{
+                padding-top:10vh;
+                padding-bottom:10vh;
+                &-element{
+                    border:1px solid white;
+                    width: 100%;
+                    min-height:100px;
+                    height: auto;
+                    margin-bottom: 42px;
+                    background-color: #2B002C;
+                    &-header{
+                        display:flex;
+                        justify-content: space-between;
+                        text-align: center;
+                        padding: 25px 20px 50px 20px;
+                        &-title{
+                            color:white;
+                            font-size: 20px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-button{
+                            background-color:transparent;
+                            border: none;
+                            color:#D300CB;
+                            font-size:32px;
+                            font-family: 'Wadik';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                            cursor: pointer;
+                        }
+                    }
+                    &-txt{
+                        text-align:left;
+                        padding: 0px 20px 20px 20px;
+                        color:white;
+                        font-size: 18px;
+                        font-family: 'Wadik';
+                        letter-spacing: 0.01em;
+                        line-height: 129%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .projects{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        &__card{
+            width:100%;
+            background-color: #b603b0;
+            height: 520px;
+            &-pic{
+                width: 80%;
+                padding-top: 30px;
+                padding-left: 20px;
+            }
+            &-title{
+                font-family: 'Wadik';
+                color: rgb(255, 255, 255);
+                -webkit-text-stroke: 0.25px #000000;
+                padding-top: 20px;
+                padding-left: 20px;
+                font-size: 26px;
+            }
+            &-list{
+                padding: 0px;
+                margin: 0px;
+                padding-left: 20px;
+                padding-top: 20px;
+                list-style-type: none;
+                &-item{
+                    font-size:28px;
+                    padding-top: 5px;
+                    font-family: 'Wadik';
+                    color: white;
+                    -webkit-text-stroke: 0.25px #000000;
+                }
+            }
+        }
+        &__card_middle{
+            width:100%;
+            background-color: #c952c5;
+            .projects__card-pic-middle{
+                width: 100%;
+                padding-left: 0px;
+                padding-top: 120px;
+            }
+        }
+        &__card_right{
+            width:100%;
+            background-color: #680165;
+            .projects__card-pic-right{
+                width: 100%;
+                padding-left: 0px;
+                padding-right: 100px;
+                padding-top: 80px;
+            }
+        }
+    }
+    
+    .services{
+        height:auto;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        canvas{
+            display: none !important;
+            position: absolute;
+            height: 50%;
+            width: 50%;
+        }
+        .container{
+            .services__base{
+                &-title{
+                    padding:60px 0px 30px 0px;
+                    color: white;
+                    font-size:21px;
+                    font-family: 'FemmeFatale';
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                }
+                &-row{
+                    display: flex;
+                    justify-content:flex-start;
+                    padding-bottom: 0vh;
+                    flex-direction: column;
+                    &-element{
+                        border: 1px solid white;
+                        width: 100%;
+                        background-color: #2B002C;
+                        margin-bottom: 20px;
+                        &-title{
+                            color: white;
+                            text-align: center;
+                            padding-top: 20px;
+                            font-size: 24px;
+                            font-family: 'FemmeFatale';
+                            letter-spacing: 0.01em;
+                            line-height: 129%;
+                        }
+                        &-list{
+                            color: white;
+                            list-style-image: url(assets/img/list.svg);
+                            padding: 20px 30px 20px 40px;
+                            margin: 0px;
+                            &-item{
+                                padding: 10px 0px 10px 0px;
+                                font-size: 16px;
+                                font-family: 'Wadik';
+                                letter-spacing: 0.01em;
+                                line-height: 129%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials{
+        height: 50vh;
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        .socials__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .socials__row{
+            display:flex;
+            justify-content:space-between;
+            padding:40px 0px 40px 0px;
+            flex-direction: column;
+            &-link{
+                position: relative;
+                display: flex;
+                color:#D300CB;
+                font-size:26px;
+                font-family: 'Wadik';
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                transition:0.5s;
+                padding-bottom: 20px;
+                &-pic{
+                    display: none;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 15px;
+                    height: 15px;
+                    filter: invert(100%);
+                }
+                &:hover{
+                    color:#00D36E;
+                    transition:0.5s;
+                }
+            }
+        }
+    }
+    
+    .connect{
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        position: relative;
+        .connect__success{
+            color:#00D36E;
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 18px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__error{
+            color: rgb(247, 111, 111);
+            font-family: 'Wadik';
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            font-size: 18px;
+            width: 60%;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__title{
+            padding-top:60px;
+            color: white;
+            text-align: center;
+            font-size:34px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        .connect__form{
+            height: 100%;
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            &-bottom{
+                display: flex;
+                justify-content:space-between;
+                #connect__file{
+                    display: none;
+                    cursor: pointer;
+                }
+                &-button{
+                    display: block;
+                    background-color:#D300CB;
+                    border: 1px solid #D300CB;
+                    padding: 20px 30px 20px 30px;
+                    color: white;
+                    width: auto;
+                    font-family: 'Wadik';
+                    font-size:24px;
+                    margin: 0 auto;
+                    margin-bottom:20px;
+                    margin-top:40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: transparent;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &-input{
+                width:100%;
+                display: block;
+                color: white;
+                font-family: 'Wadik';
+                font-size: 18px;
+                line-height: 130%;
+                background: none;
+                outline: 0 transparent !important;
+                padding: 40px 0px 20px 0px;
+                border: none;
+                border-bottom: 1px solid white;
+            }
+            &-disclaimer{
+                font-family:'Wadik';
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.524);
+                letter-spacing: 0.01em;
+                line-height: 129%;
+                &-link{
+                    font-family:'Wadik';
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.524);
+                    letter-spacing: 0.01em;
+                    line-height: 129%;
+                    transition: 0.5s;
+                    &:hover{
+                        color: #D300CB;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .contacts{
+        box-shadow: inset 0px 0px 30px rgba(0,0,0,0.9);
+        position: relative;
+        height: 100vh;
+        canvas{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        &__title{
+            font-size:21px;
+            color:#D300CB;
+            padding:60px 0px 20px 0px;
+            font-family: 'FemmeFatale';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+        }
+        &__subtitle{
+            font-size:16px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            margin-top: 20vh;
+        }
+        &__link{
+            width: 350px;
+            font-size:12px;
+            color:#D300CB;
+            padding:20px 0px 20px 0px;
+            font-family: 'Wadik';
+            letter-spacing: 0.01em;
+            line-height: 129%;
+            transition: 0.5s;
+            &:hover{
+                color: #00D36E;
+                transition: 0.5s;
+            }
+        }
+        .footer{
+            width: 82vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            &__contacts{
+                width: 220px;
+                &-link{
+                    display: block;
+                    margin-bottom:15px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    transition: 0.5s;
+                    font-size:12px;
+                    &:hover{
+                        color: #00D36E;
+                        transition: 0.5s;
+                    }
+                    &-icon{
+                        &-pic{
+                            max-width:25px;
+                            height:auto;
+                            filter: invert(100%);
+                        }
+                    }
+                }
+        
+            }
+            &__contacts_soc{
+                display: flex;
+                justify-content:space-between;
+            }
+            &__address{
+                &-txt{
+                    font-size: 12px;
+                    font-family: 'Wadik';
+                    color: #D300CB;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    
+    .menu{
+        height: 100vh;
+        background: radial-gradient(50% 50% at 50% 50%, #2B002C 0%, #1B0122 100%);
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        .container{
+            position: relative;
+            .menu__logo{
+                position: absolute;
+                top: 30vh;
+                width: 40%;
+                display: none;
+            }
+            .menu__list{
+                list-style: none;
+                padding:0;
+                position:absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                top: 220px;
+                .menu__list-item{
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .menu__list-item-link{
+                        color: white;
+                        font-family: 'FemmeFatale';
+                        font-size: 21px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .menu__footer{
+                width: 84vw;
+                margin: 0 auto;
+                display: flex;
+                justify-content:space-between;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 75vh;
+                &-contacts{
+                    width: 220px;
+                    &-link{
+                        display: block;
+                        margin-bottom:15px;
+                        font-family: 'Wadik';
+                        color: #D300CB;
+                        transition: 0.5s;
+                        font-size:12px;
+                        &:hover{
+                            color: #00D36E;
+                            transition: 0.5s;
+                        }
+                        &-icon{
+                            &-pic{
+                                max-width:25px;
+                                height:auto;
+                            }
+                        }
+                    }
+            
+                }
+                .menu__footer-contacts_soc{
+                    display: flex;
+                    justify-content:space-between;
+                }
+                &-address{
+                    &-txt{
+                        font-family: 'Wadik';
+                        font-size:12px;
+                        color: #D300CB;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
